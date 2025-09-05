@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "sistema de lecheria", "sistema de lecheria\sistema de lecheria.vbproj", "{B883D441-F300-4456-9029-1BD6DABEF929}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B883D441-F300-4456-9029-1BD6DABEF929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B883D441-F300-4456-9029-1BD6DABEF929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B883D441-F300-4456-9029-1BD6DABEF929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B883D441-F300-4456-9029-1BD6DABEF929}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6942037-A587-4FE4-8C1A-FD8AC8287B18}
+	EndGlobalSection
+EndGlobal
