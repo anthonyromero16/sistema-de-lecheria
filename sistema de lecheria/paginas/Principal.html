@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <title>Lácteos y Quesos | Airehcel Principal</title>
+    <title>Lácteos y Quesos | Don Joaquin Principal</title>
     <link rel="icon" href="https://lacteosdonjoaquin.com/wp-content/uploads/2019/11/Logo-Lacteos-Quesos-Don-Joaquin.png">
 
     <style>
@@ -13,7 +13,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: transparent; /* transparente */
+            background-color: #5a3523;
             padding: 12px 0;
             position: fixed;
             top: 0;
@@ -21,20 +21,20 @@
             z-index: 1000;
         }
 
-            /* Botones del menú sobre la imagen */
             nav.w3-bar a {
                 color: #f0f0f0 !important;
                 padding: 14px 20px;
                 text-decoration: none;
                 font-weight: bold;
                 font-size: 20px;
-                text-shadow: 1px 1px 4px black; /* mejora visibilidad sobre la imagen */
+                text-shadow: 1px 1px 4px black;
                 transition: background 0.3s, color 0.3s;
             }
 
                 nav.w3-bar a:hover {
-                    background-color: #EED6D3 !important; /* un ligero fondo al pasar el mouse */
-                    color: #3B0404 !important;
+                    background-color: #3c2b23 !important;
+                    color: #ffffff !important;
+                    border-radius: 6px;
                 }
 
         body {
@@ -47,7 +47,7 @@
             background-image: url('https://lacteosdonjoaquin.com/wp-content/uploads/2019/11/cover-dj-home-1024x683.jpg');
             background-size: cover;
             background-position: center;
-            height: 500px; /* altura del header */
+            height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -58,11 +58,20 @@
         }
 
         main {
+            padding: 40px 20px;
+            background-color: #f8f5f2;
+        }
+
+        section {
+            background: #d9d3ce;
+            margin: 20px auto;
             padding: 40px;
-            background-color: #f8f8f8;
+            border-radius: 8px;
+            max-width: 1000px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
     </style>
-</head>
 </head>
 
 <body>
@@ -75,10 +84,27 @@
         <a href="#contactos" class="w3-button w3-bar-item">CONTACTOS</a>
     </nav>
 
-    <header>
-        <h1>Bienvenidos a Lácteos y Quesos Airehcel</h1>
+    <header id="home">
+        <h1>Bienvenidos a Lácteos y Quesos Don Joaquin</h1>
         <p>El sabor fresco y artesanal que nos distingue</p>
     </header>
+
+    <main>
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Artículos sobre la producción de lácteos, tips de recetas y más.</p>
+        </section>
+
+        <section id="nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>Conoce nuestra historia y el compromiso con la calidad artesanal.</p>
+        </section>
+
+        <section id="productos">
+            <h2>Productos</h2>
+            <p>Explora nuestra selección de quesos frescos y productos lácteos.</p>
+        </section>
+    </main>
 
 </body>
 </html>
