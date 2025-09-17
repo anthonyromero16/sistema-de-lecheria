@@ -1,0 +1,249 @@
+﻿/* Barra de menú transparente */
+nav.w3-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* transparente */
+    padding: 12px 0;
+    position: relative; /* 👈 AQUÍ defines la posición */
+    top: 0; /* 👈 Esto hace que quede pegada arriba */
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Se superpone sobre otros elementos */
+}
+
+    /* Botones del menú sobre la imagen */
+    nav.w3-bar a {
+        color: #5a3523 !important;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        text-shadow: 1px 1px 4px black; /* mejora visibilidad sobre la imagen */
+        transition: background 0.3s, color 0.3s;
+    }
+
+        nav.w3-bar a:hover {
+            background-color: #EED6D3 !important; /* un ligero fondo al pasar el mouse */
+            color: #3B0404 !important;
+        }
+
+body {
+    margin: 0;
+    font-family: Calibri, sans-serif;
+}
+
+/* Header con imagen completa */
+header {
+    position: relative;
+    background-image: url('https://lacteosdonjoaquin.com/wp-content/uploads/2019/11/cover-dj-home-1024x683.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px; /* altura del header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    text-align: center;
+}
+
+/* esta vaina es para el logo  */
+.logo-header {  
+    position: absolute;
+    top: 40px; /* Ajusta la altura */
+    left: 20px; /* Pegado a la esquina izquierda */
+    width: 150px; /* Tamaño del logo */
+    height: auto;
+}
+main {
+    padding: 40px;
+    background-color: white;
+}
+
+
+.subtitulo {
+    font-family: 'Great Vibes', cursive; /* Tipografía */
+    font-size: 15px; /* Tamaño */
+    font-style: normal; /* Cursiva */
+    color: #FFE8E8; /* Color */
+    text-shadow: 1px 1px 3px #000; /* Sombrita para destacar */
+    margin-top: 10px;
+}
+/*////////////////////////////////////////////////////////////////////////////////*/
+.redes-sociales {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* centra los íconos */
+    align-items: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+    .redes-sociales li {
+        margin: 0 15px;
+    }
+
+    .redes-sociales a svg {
+        transition: transform 0.3s, fill 0.3s;
+    }
+
+    .redes-sociales a:hover svg {
+        transform: scale(1.2); /* efecto zoom */
+        fill: #FFD700; /* cambia de color al pasar el mouse */
+    }
+
+
+
+
+
+/* Contenedor de redes sociales */
+.redes-header {
+    position: absolute; /* relativo al header */
+    top: 210px; /* desde la parte superior */
+    right: 30px; /* desde la parte derecha */
+    display: flex; /* alinear los iconos en línea */
+    gap: 15px; /* espacio entre iconos */
+}
+
+    .redes-header a svg {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s, fill 0.3s;
+    }
+
+    .redes-header a:hover svg {
+        transform: scale(1.2);
+        fill: #FFD700; /* color al pasar el mouse */
+    }
+
+@media (min-width: 68px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .heading {
+        margin-bottom: 60px !important;
+    }
+
+    /*///////////////////////////////////////////////////////////////////*/
+
+    /* Contenedor genérico Bloque 1 */
+    .container.bloque-1 {
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    /* Caja oscura */
+    .bloque-1 .dark_container {
+        padding: 30px;
+        background-color: #5a3523; /* color de fondo */
+        border-radius: 25px;
+        max-width: 500px; /* <- controla el ancho máximo */
+        margin-right: 0 auto; /* <- ,   margin-left: auto pa que este a la derecha , margin: 0 auto pa que lo centre  */
+    }
+
+    /* Títulos */
+    .bloque-1 .heading {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+        .bloque-1 .heading h3,
+        .bloque-1 .heading h4 {
+            color: white;
+            font-weight: 700;
+            margin: 0;
+        }
+
+    /* Texto */
+    .bloque-1 p {
+        text-align: center;
+        color: white;
+        line-height: 1.6;
+    }
+
+    .row.align-items-stretch {
+        display: flex; /* Asegura que sea flex */
+        gap: 20px; /* espacio entre contenedor y la imagen */
+    }
+
+    .dark_container {
+        flex: 1; /* Ocupa todo el espacio disponible */
+    }
+
+    /* La imagen ocupará toda la altura del contenedor */
+    .imagen-lateral {
+        width: 50%; /* ocupa el ancho de su columna */
+        height: 50%; /* misma altura que el contenedor */
+        object-fit: cover; /* recorta la imagen proporcionalmente */
+        border-radius: 25px; /* opcional, para que coincida con los bordes del contenedor */
+    }
+    /*bloque de la seccion del segundo cuadro de texto*/
+    .bloque-2 {
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 25px;
+        color: white;
+        flex: 1;
+        align-content: center;
+        margin: 0 auto;
+    }
+
+    .bloque-2 {
+        background-color: #5a3523;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    /*cuadro de las raza de vacas lecheras*/
+    .bloque-3 {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .bloque-3 {
+        background-color: #c19a85; /* color detrás de los cuadros */
+        padding: 20px; /* espacio interno */
+        border-radius: 20px; 
+    }
+
+    /* subtítulo encima de los cuadros */
+    .subtitulo-3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+        color: white; 
+    }
+
+        /* fila que contiene los tres cuadros */
+        .bloque-3 .recuadros {
+            display: flex; /* pone los hijos en fila */
+            justify-content: center; /* centra toda la fila */
+            gap: 20px; /* espacio entre recuadros */
+            flex-wrap: wrap; /* permite que bajen si la pantalla es muy estrecha */
+        }
+
+        /* estilo individual de cada cuadro */
+        .bloque-3 .cuadro {
+            background-color: #5a3523;
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 300px; /* ancho máximo de cada recuadro */
+            text-align: center;
+        }
+
+            .bloque-3 .cuadro img {
+                width: 100%;
+                border-radius: 15px;
+                max-height: 200px; /* altura máxima igual para todas */
+                object-fit: cover;
+            }
+}
+ 
+    

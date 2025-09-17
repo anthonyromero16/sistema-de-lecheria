@@ -3,78 +3,55 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <title>Lácteos y Quesos | Don Joaquin Principal</title>
-    <link rel="icon" href="https://lacteosdonjoaquin.com/wp-content/uploads/2019/11/Logo-Lacteos-Quesos-Don-Joaquin.png">
+    <meta name="description" content="esta pagina web trata sobre los productos lacteos producidos por la compañia don juaquion de origen panameño" />
 
-    <style>
-        /* Barra de menú transparente */
-        nav.w3-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #5a3523;
-            padding: 12px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-            nav.w3-bar a {
-                color: #f0f0f0 !important;
-                padding: 14px 20px;
-                text-decoration: none;
-                font-weight: bold;
-                font-size: 20px;
-                text-shadow: 1px 1px 4px black;
-                transition: background 0.3s, color 0.3s;
-            }
-
-                nav.w3-bar a:hover {
-                    background-color: #3c2b23 !important;
-                    color: #ffffff !important;
-                    border-radius: 6px;
-                }
-
-        body {
-            margin: 0;
-            font-family: Calibri, sans-serif;
-        }
-
-        /* Header con imagen completa */
-        header {
-            background-image: url('https://lacteosdonjoaquin.com/wp-content/uploads/2019/11/cover-dj-home-1024x683.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 1px 1px 4px black;
-            text-align: center;
-        }
-
-        main {
-            padding: 40px 20px;
-            background-color: #f8f5f2;
-        }
-
-        section {
-            background: #d9d3ce;
-            margin: 20px auto;
-            padding: 40px;
-            border-radius: 8px;
-            max-width: 1000px;
-            text-align: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-    </style>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Lácteos y Quesos | Airehcel Principal</title>
+    <link rel="icon" href="../imagenes/logos/Logo-Lacteos-Quesos-Don-Joaquin.png" type="image/png">
 </head>
 
 <body>
+
+
+    <header id="home">
+        <img src="../imagenes/logos/Logo-Lacteos-Quesos-Don-Joaquin.png" class="logo-header">   <!--colocacion del logo en la parte superior izquierza-->
+        <!-- Contenedor de iconos a la derecha -->
+        <div class="redes-header">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/donjoaquinlacteos/" target="_blank">
+                <svg  width="20" height="20" viewBox="0 0 320 512">
+                    <path fill="white" d="M279.14 288l14.22-92.66h-88.91V127.88c0-25.35
+                12.42-50.06 52.24-50.06H295V6.26S273.48 0
+                252.36 0c-73.14 0-121.13 44.38-121.13
+                124.72V195.3H86.4V288h44.83v224h92.66V288z" />
+                </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/donjoaquinlacteos/" target="_blank">
+                <svg  width="24" height="24" viewBox="0 0 448 512">
+                    <path fill="white" d="M102.421 0.491 C 52.949 6.425 17.915 40.509 10.285 90.13 C 8.866 99.354 8.866 279.044 10.285 288.268 C 18.068 338.883 52.842 372.814 103.763 379.482 C 114.589 380.9 278.665 381.217 292.1 379.846 C 343.362 374.616 378.698 342.899 388.32 293.482 C 390.133 284.166 391.221 118.947 389.597 99.441 C 385.208 46.737 349.519 7.809 299.168 0.806 C 293.814 0.061 108.477 -0.235 102.421 0.491 M 296.462 36.124 C 328.638 41.781 348.34 61.808 355.09 95.717 C 356.817 104.394 357.066 264.243 355.372 277.467 C 350.379 316.467 329.409 338.575 291.993 344.285 C 282.808 345.687 117.948 345.688 108.752 344.286 C 71.414 338.596 52.34 320.854 45.721 285.661 C 44.399 278.631 44.32 273.184 44.32 188.827 L 44.32 99.441 L 46.047 91.626 C 52.921 60.515 72.656 41.603 103.911 36.178 C 113.12 34.579 287.396 34.531 296.462 36.124 M 293.529 67.881 C 278.952 73.642 275.042 93.151 286.263 104.135 C 299.845 117.43 322.501 108.982 323.85 90.118 C 325.021 73.755 308.789 61.85 293.529 67.881 M 189.199 91.33 C 96.142 102.84 68.713 223.288 147.838 272.964 C 210.856 312.528 293.974 268.402 297.694 193.406 C 300.607 134.7 246.921 84.19 189.199 91.33 M 214.225 128.121 C 252.912 137.141 273.682 180.722 256.272 216.347 C 231.379 267.287 157.346 262.285 139.781 208.477 C 124.624 162.045 166.386 116.966 214.225 128.121" />
+                </svg>
+            </a>
+
+            <!-- X (Twitter) -->
+            <a href="https://x.com/donjoaquinlacteos" target="_blank">
+                <svg  width="20" height="20" viewBox="0 0 1200 1227">
+                    <path fill="white" d="M714.163 519.284L1160.89 0H1054.96L667.137
+                450.887 366.49 0H0L468.615 681.821 0
+                1226.37h105.933l407.008-479.454 318.719
+                479.454H1200L714.163 519.284zm-143.53
+                168.227l-47.206-68.131L182.893 79.576h137.43l303.25
+                438.108 47.206 68.131 347.622
+                502.57H878.667L570.633 687.511z" />
+                </svg>
+            </a>
+        </div>
+
+        <h1>Bienvenidos a Lácteos y Quesos Don Joaquin</h1>
+        <p class="subtitulo">El sabor fresco y artesanal que nos distingue</p>
+    </header>
     <!--Barra de menu-->
     <nav class="w3-bar">
         <a href="#home" class="w3-button w3-bar-item">HOME</a>
@@ -83,28 +60,88 @@
         <a href="#productos" class="w3-button w3-bar-item">PRODUCTOS</a>
         <a href="#contactos" class="w3-button w3-bar-item">CONTACTOS</a>
     </nav>
-
-    <header id="home">
-        <h1>Bienvenidos a Lácteos y Quesos Don Joaquin</h1>
-        <p>El sabor fresco y artesanal que nos distingue</p>
-    </header>
-
     <main>
-        <section id="blog">
-            <h2>Blog</h2>
-            <p>Artículos sobre la producción de lácteos, tips de recetas y más.</p>
-        </section>
 
-        <section id="nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Conoce nuestra historia y el compromiso con la calidad artesanal.</p>
-        </section>
 
-        <section id="productos">
-            <h2>Productos</h2>
-            <p>Explora nuestra selección de quesos frescos y productos lácteos.</p>
-        </section>
-    </main>
+        <div class="container bloque-1">
+            <div class="row">
+                <div class="row align-items-stretch">
+                    <!-- align-items-stretch hace que los hijos tengan la misma altura -->
+                    <div class="col-lg-8 col-md-10">
+                        <div class="dark_container column-bloque">
+                            <div class="heading">
+                                <h3>Permanentes Controles</h3>
+                                <h4>de calidad</h4>
+
+                                <p>
+
+                                    La materia prima de nuestros lácteos y quesos se procesa recién se produce en fincas excepcionales en Chiriquí.
+                                </p>
+                                <p>
+                                    Contamos con leche de la mejor calidad en nuestra fábrica todos los días que nos permite desarrollar productos muy frescos,de mejor textura y sabor.
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-2">
+                        <img src="../imagenes/img01.png" alt="Imagen al lado" class="imagen-lateral" title="imagen de una persona feliz abrazando una vaca">
+                    </div>
+                    <div class="col-lg-2 col-md-1"></div>
+                </div>
+            </div>
+        </div>
+
+            <div class="container bloque-2">
+                <h3>
+                    ¿Porque nuestra leche es la mejor del mercado?
+                </h3>
+                <p>
+                    La calidad de la leche puede ser influenciada por varios factores, incluyendo la raza de la vaca, su alimentación, el manejo del rebaño y las condiciones de ordeño. En Lácteos y Quesos Don Joaquín, nos aseguramos de que nuestras vacas lecheras sean de razas reconocidas por su alta producción y calidad de leche.    
+                </p>
+            </div>
+
+            <div class="container bloque-3">
+                <h3 class="subtitulo-3">Las diferentes razas de vacas lecheras que tenemos son:</h3>
+
+                <div class="recuadros">
+                    <div class="cuadro">
+                        <h4>Holstein</h4>
+                        <p>De origen holandés, altamente productiva en volumen.</p>
+                        <img src="../imagenes/imagenes-razas/Vaca-holstein.png" alt="Vaca Holstein" title="Vaca Holstein">
+                    </div>
+
+                    <div class="cuadro">
+                        <h4>Sindhi</h4>
+                        <p> De origen pakistani, adaptada a climas cálidos y húmedos.</p>
+                        <img src="../imagenes/imagenes-razas/Vaca-sindhi.png" alt="Vaca Sindhi" title="Vaca Sindhi">
+                    </div>
+
+                    <div class="cuadro">
+                        <h4>Jersey</h4>
+                        <p>De origen inglés, produce leche con alto contenido de grasa y proteína.</p>
+                        <img src="../imagenes/imagenes-razas/Vaca-jersey.png" alt="Vaca Jersey" title="Vaca Jersey">
+                    </div>
+                </div>
+            </div>
+
+            <section id="blog">
+                <h2>Blog</h2>
+                <p>Artículos sobre la producción de lácteos, tips de recetas y más.</p>
+            </section>
+
+            <section id="nosotros">
+                <h2>Sobre Nosotros</h2>
+                <p>Conoce nuestra historia y el compromiso con la calidad artesanal.</p>
+            </section>
+
+            <section id="productos">
+                <h2>Productos</h2>
+                <p>Explora nuestra selección de quesos frescos y productos lácteos.</p>
+            </section>
+</main>
 
 </body>
 </html>
