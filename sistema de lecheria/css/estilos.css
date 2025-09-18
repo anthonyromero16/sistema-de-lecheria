@@ -11,21 +11,21 @@ nav.w3-bar {
     z-index: 1000; /* Se superpone sobre otros elementos */
 }
 
-    /* Botones del menú sobre la imagen */
-    nav.w3-bar a {
-        color: #5a3523 !important;
-        padding: 14px 20px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 20px;
-        text-shadow: 1px 1px 4px black; /* mejora visibilidad sobre la imagen */
-        transition: background 0.3s, color 0.3s;
-    }
+/* Botones del menú sobre la imagen */
+nav.w3-bar a {
+    color: #5a3523 !important;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 4px black; /* mejora visibilidad sobre la imagen */
+    transition: background 0.3s, color 0.3s;
+}
 
-        nav.w3-bar a:hover {
-            background-color: #EED6D3 !important; /* un ligero fondo al pasar el mouse */
-            color: #3B0404 !important;
-        }
+    nav.w3-bar a:hover {
+        background-color: #EED6D3 !important; /* un ligero fondo al pasar el mouse */
+        color: #3B0404 !important;
+    }
 
 body {
     margin: 0;
@@ -49,16 +49,17 @@ header {
 }
 
 /* esta vaina es para el logo  */
-.logo-header {  
+.logo-header {
     position: absolute;
     top: 40px; /* Ajusta la altura */
     left: 20px; /* Pegado a la esquina izquierda */
     width: 150px; /* Tamaño del logo */
     height: auto;
 }
+
 main {
     padding: 40px;
-    background-color: #f8f8f8;
+    background-color: white;
 }
 
 
@@ -130,23 +131,39 @@ main {
     /*///////////////////////////////////////////////////////////////////*/
 
     /* Contenedor genérico Bloque 1 */
-    .container.bloque-1 {
-        padding: 0;
-        margin-top: 40px;
+    .bloque-1 {
+        margin-top: 20px; /* menos separación arriba */
+        margin-bottom: 20px; /* menos separación abajo (acerca al bloque 2) */
     }
 
-    /* Caja oscura */
+    .container.bloque-1 {
+        margin-top: 20px; /* en lugar de 40px */
+    }
+
+    .bloque-1 .row.align-items-stretch {
+        display: flex;
+        justify-content: center;
+        align-items: stretch; /* iguala la altura de cuadro e imagen */
+        gap: 20px;
+    }
+    /* Caja oscuro */
+    /* Controla el tamaño del cuadro */
     .bloque-1 .dark_container {
-        padding: 30px;
-        background-color: #3c2b23; /* color de fondo */
+        flex: 1;
+        min-height: 300px; /* 👉 altura fija del cuadro */
+        max-height: 300px; /* opcional, límite */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: #5a3523;
         border-radius: 25px;
-        max-width: 500px; /* <- controla el ancho máximo */
-        margin-right: 0 auto; /* <- ,   margin-left: auto pa que este a la derecha , margin: 0 auto pa que lo centre  */
+        color: white;
     }
 
     /* Títulos */
     .bloque-1 .heading {
-        margin-bottom: 40px;
+        margin-bottom: 10px;
         text-align: center;
     }
 
@@ -164,19 +181,166 @@ main {
         line-height: 1.6;
     }
 
+    /* Fila centrada */
     .row.align-items-stretch {
-        display: flex; /* Asegura que sea flex */
-        gap: 20px; /* espacio entre contenedor y la imagen */
+        display: flex;
+        justify-content: center; /* centra el conjunto cuadro + imagen */
+        align-items: stretch; /* hace que ambos tengan la misma altura */
+        gap: 20px; /* espacio entre cuadro e imagen */
     }
 
     .dark_container {
         flex: 1; /* Ocupa todo el espacio disponible */
     }
-
-    /* La imagen ocupará toda la altura del contenedor */
-    .imagen-lateral {
-        width: 50%; /* ocupa el ancho de su columna */
-        height: 50%; /* misma altura que el contenedor */
-        object-fit: cover; /* recorta la imagen proporcionalmente */
-        border-radius: 25px; /* opcional, para que coincida con los bordes del contenedor */
+    .bloque-1 .dark_container {
+        min-height: 350px; /* Altura mínima */
+        max-height: 400px; /* Altura máxima opcional */
     }
+
+    /* Imagen */
+    /* Imagen del lado */
+    .imagen-lateral {
+        flex: .3;
+        width: 0%;
+        height: 24%; /* altura al cuad */
+        object-fit: cover; /* recorta sin deformar */
+        border-radius: 25px;
+    }
+    /*bloque de la seccion del segundo cuadro de texto*/
+    .bloque-2 {
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 25px;
+        color: white;
+        flex: 1;
+        align-content: center;
+        margin: 0 auto;
+    }
+ 
+    .bloque-2 {
+        background-color: #5a3523;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    /*cuadro de las raza de vacas lecheras*/
+    .bloque-3 {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .bloque-3 {
+        background-color: #c19a85; /* color detrás de los cuadros */
+        padding: 20px; /* espacio interno */
+        border-radius: 20px;
+    }
+
+    /* subtítulo encima de los cuadros */
+    .subtitulo-3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    /* fila que contiene los tres cuadros */
+    .bloque-3 .recuadros {
+        display: flex; /* pone los hijos en fila */
+        justify-content: center; /* centra toda la fila */
+        gap: 20px; /* espacio entre recuadros */
+        flex-wrap: wrap; /* permite que bajen si la pantalla es muy estrecha */
+    }
+
+    /* estilo individual de cada cuadro */
+    .bloque-3 .cuadro {
+        background-color: #5a3523;
+        color: white;
+        border-radius: 20px;
+        padding: 20px;
+        max-width: 300px; /* ancho máximo de cada recuadro */
+        text-align: center;
+    }
+
+        .bloque-3 .cuadro img {
+            width: 100%;
+            border-radius: 15px;
+            max-height: 200px; /* altura máxima igual para todas */
+            object-fit: cover;
+        }
+}
+
+
+/*/////////////////////////////////////////////////estilos footer//////////////////////////////////////*/
+footer {
+    background-color: #5a3523;
+    color: #f0f0f0;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+    clear: both;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+    .footer-col h3 {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-col p, .footer-col ul {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+            .footer-col ul li a {
+                color: #f0f0f0;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .footer-col ul li a:hover {
+                    color: #d9d3ce;
+                }
+
+.social a img {
+    width: 28px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+    .social a img:hover {
+        transform: scale(1.1);
+    }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #d9d3ce;
+    padding-top: 15px;
+}

@@ -93,8 +93,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\estilos.css" />
+    <Content Include="imagenes\fincas\1.jpg" />
+    <Content Include="imagenes\fincas\2.jpg" />
+    <Content Include="imagenes\fincas\3.png" />
+    <Content Include="imagenes\imagenes-razas\Vaca-holstein.png" />
+    <Content Include="imagenes\imagenes-razas\Vaca-jersey.png" />
+    <Content Include="imagenes\imagenes-razas\Vaca-sindhi.png" />
     <Content Include="imagenes\img01.png" />
     <Content Include="imagenes\logos\Logo-Lacteos-Quesos-Don-Joaquin.png" />
+    <Content Include="imagenes\Vaca-holstein.png" />
+    <Content Include="imagenes\Vaca-jersey.png" />
+    <Content Include="imagenes\Vaca-sindhi.png" />
     <Content Include="paginas\Principal.html" />
     <Content Include="Web.config" />
   </ItemGroup>
