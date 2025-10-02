@@ -10,7 +10,7 @@ nav.w3-bar {
     width: 100%; /* Ocupa todo el ancho */
     z-index: 1000; /* Se superpone sobre otros elementos */
 }
-
+ 
 /* Botones del menú sobre la imagen */
 nav.w3-bar a {
     color: #5a3523 !important;
