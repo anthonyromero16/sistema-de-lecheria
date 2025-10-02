@@ -104,6 +104,7 @@
     <Content Include="imagenes\Vaca-holstein.png" />
     <Content Include="imagenes\Vaca-jersey.png" />
     <Content Include="imagenes\Vaca-sindhi.png" />
+    <Content Include="paginas\ganado.html" />
     <Content Include="paginas\Principal.html" />
     <Content Include="Web.config" />
   </ItemGroup>
