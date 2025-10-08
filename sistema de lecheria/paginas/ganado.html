@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="esta pagina web trata sobre los productos lacteos producidos por la compañia don juaquion de origen panameño" />
+
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/script.js" defer></script>
+    <title>Lácteos y Quesos | Airehcel Principal</title>
+    <link rel="icon" href="../imagenes/logos/Logo-Lacteos-Quesos-Don-Joaquin.png" type="image/png">
+</head>
+ 
+<body>
+
+
+    <header id="home">
+        <img src="../imagenes/logos/Logo-Lacteos-Quesos-Don-Joaquin.png" class="logo-header">   <!--colocacion del logo en la parte superior izquierza-->
+        <!-- Contenedor de iconos a la derecha -->
+        <div class="redes-header">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/donjoaquinlacteos/" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 320 512">
+                    <path fill="white" d="M279.14 288l14.22-92.66h-88.91V127.88c0-25.35
+                12.42-50.06 52.24-50.06H295V6.26S273.48 0
+                252.36 0c-73.14 0-121.13 44.38-121.13
+                124.72V195.3H86.4V288h44.83v224h92.66V288z" />
+                </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/donjoaquinlacteos/" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 448 512">
+                    <path fill="white" d="M102.421 0.491 C 52.949 6.425 17.915 40.509 10.285 90.13 C 8.866 99.354 8.866 279.044 10.285 288.268 C 18.068 338.883 52.842 372.814 103.763 379.482 C 114.589 380.9 278.665 381.217 292.1 379.846 C 343.362 374.616 378.698 342.899 388.32 293.482 C 390.133 284.166 391.221 118.947 389.597 99.441 C 385.208 46.737 349.519 7.809 299.168 0.806 C 293.814 0.061 108.477 -0.235 102.421 0.491 M 296.462 36.124 C 328.638 41.781 348.34 61.808 355.09 95.717 C 356.817 104.394 357.066 264.243 355.372 277.467 C 350.379 316.467 329.409 338.575 291.993 344.285 C 282.808 345.687 117.948 345.688 108.752 344.286 C 71.414 338.596 52.34 320.854 45.721 285.661 C 44.399 278.631 44.32 273.184 44.32 188.827 L 44.32 99.441 L 46.047 91.626 C 52.921 60.515 72.656 41.603 103.911 36.178 C 113.12 34.579 287.396 34.531 296.462 36.124 M 293.529 67.881 C 278.952 73.642 275.042 93.151 286.263 104.135 C 299.845 117.43 322.501 108.982 323.85 90.118 C 325.021 73.755 308.789 61.85 293.529 67.881 M 189.199 91.33 C 96.142 102.84 68.713 223.288 147.838 272.964 C 210.856 312.528 293.974 268.402 297.694 193.406 C 300.607 134.7 246.921 84.19 189.199 91.33 M 214.225 128.121 C 252.912 137.141 273.682 180.722 256.272 216.347 C 231.379 267.287 157.346 262.285 139.781 208.477 C 124.624 162.045 166.386 116.966 214.225 128.121" />
+                </svg>
+            </a>
+
+            <!-- X (Twitter) -->
+            <a href="https://x.com/donjoaquinlacteos" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 1200 1227">
+                    <path fill="white" d="M714.163 519.284L1160.89 0H1054.96L667.137
+                450.887 366.49 0H0L468.615 681.821 0
+                1226.37h105.933l407.008-479.454 318.719
+                479.454H1200L714.163 519.284zm-143.53
+                168.227l-47.206-68.131L182.893 79.576h137.43l303.25
+                438.108 47.206 68.131 347.622
+                502.57H878.667L570.633 687.511z" />
+                </svg>
+            </a>
+        </div>
+
+        <h1>Bienvenidos a Lácteos y Quesos Don Joaquin</h1>
+        <p class="subtitulo">El sabor fresco y artesanal que nos distingue</p>
+    </header>
+    <!--Barra de menu-->
+    <nav class="w3-bar">
+        <a href="principal.html" class="w3-button w3-bar-item">HOME</a>
+        <a href="#blog" class="w3-button w3-bar-item">BLOG</a>
+      <a href="ganado.html" class="w3-button w3-bar-item">GANADO</a>
+        <a href="#nosotros" class="w3-button w3-bar-item">NOSOTROS</a>
+        <a href="#productos" class="w3-button w3-bar-item">PRODUCTOS</a>
+        <a href="#contactos" class="w3-button w3-bar-item">CONTACTOS</a>
+    </nav>
+    <main>
+
+        <div class="tab-container1">
+            <!-- Botones de las pestañas -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="openTab(event, 'tab1')">Razas de Ganado</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab2')">Codigo de Ganado</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab3')">Dashboard de produccion</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab4')">Calendario de salud</button>
+            </div>
+
+            <!-- Contenido de las pestañas -->
+            <section id="tab1" class="tab-content active">
+                <h2>Diferentes razas bovinas que se utilizan en nuestras producción</h2>
+                <div class="texto_raza">
+                    <p>
+                        En Lechería Don Joaquín trabajamos con razas bovinas cuidadosamente seleccionadas por su alta calidad, productividad y adaptación al clima de nuestras fincas.
+                        Cada raza cumple un papel importante dentro de nuestro sistema de producción, garantizando leche de excelente sabor, pureza y valor nutricional.
+
+                        Nuestras vacas provienen de líneas genéticas reconocidas por su eficiencia lechera, resistencia y buen temperamento, lo que permite mantener un manejo sostenible y respetuoso con los animales.
+                        Gracias a la combinación de distintas razas especializadas, logramos equilibrar la cantidad y calidad de la leche, además de fortalecer la salud y bienestar del ganado.
+
+                        En esta sección te presentaremos las principales razas con las que trabajamos, sus características, ventajas productivas y cómo contribuyen al éxito de nuestra lechería.
+                        Nuestro compromiso es seguir mejorando cada generación de animales para ofrecer siempre los mejores productos lácteos del campo panameño.
+                    </p>
+                </div>
+
+                <div class="carrusel-container">
+                    <button class="carrusel-btn prev">&lt;</button>
+
+                    <div class="carrusel-slide">
+                        <div class="carrusel-item active">
+                            <img src="../imagenes/imagenes-razas/Vaca_Holstein_Carrusel.jpg" alt="Holstein">
+                            <h4>Holstein</h4>
+                            <p>
+                                La raza Holstein, originaria de los Países Bajos, es reconocida mundialmente por su altísima producción de leche.
+                                Estas vacas destacan por su gran tamaño, temperamento dócil y su característico pelaje blanco con manchas negras.
+
+                                Aunque su leche tiene un contenido moderado de grasa, la cantidad que producen por vaca es excepcional,
+                                lo que las convierte en la raza más utilizada en sistemas lecheros intensivos.
+
+                                En nuestras granjas, la Holstein es fundamental para garantizar un alto volumen de leche diaria
+                                y mantener una base productiva estable.
+                            </p>
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="../imagenes/imagenes-razas/Vaca_sindhi_Carrusel.png" alt="Sindhi">
+                            <h4>Sindhi</h4>
+                            <p>
+                                La raza Sindhi, originaria de Pakistán, es una de las razas cebuinas más valoradas
+                                por su excelente adaptación a climas cálidos y húmedos.
+
+                                Posee una gran resistencia a enfermedades tropicales, buena fertilidad y longevidad.
+                                Aunque su producción de leche es menor comparada con la Holstein, su leche es rica en sólidos y grasa,
+                                ideal para la elaboración de derivados lácteos.
+
+                                En nuestras fincas, el Sindhi se utiliza para mejorar la rusticidad del hato
+                                y mantener la producción constante incluso en condiciones ambientales exigentes.
+                            </p>
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="../imagenes/imagenes-razas/Vaca_jersey_Carrusel.jpg" alt="Jersey">
+                            <h4>Jersey</h4>
+                            <p>
+                                La raza Jersey, proveniente de la Isla de Jersey en Inglaterra, es conocida por producir leche
+                                con un alto contenido de grasa y proteína, ideal para fabricar quesos, mantequilla y otros productos lácteos de calidad.
+
+                                Son vacas de tamaño pequeño a mediano, muy eficientes en el uso del alimento y de temperamento tranquilo.
+
+                                En nuestras granjas, la Jersey se emplea para mejorar la calidad composicional de la leche
+                                y equilibrar la producción total del hato junto con otras razas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="carrusel-btn next">&gt;</button>
+                </div>
+
+                <!-- Animación: vaca siendo ordeñada -->
+                <div class="ordeño-container">
+                    <h3>Haz clic en la vaca para ordeñarla</h3>
+
+                    <div class="vaca" id="vaca">
+                        <div class="cuerpo"></div>
+
+                        <div class="cabeza">
+                            <div class="hocico"></div>
+                            <div class="ojo izquierdo"></div>
+                            <div class="ojo derecho"></div>
+                            <div class="cuerno izquierdo"></div>
+                            <div class="cuerno derecho"></div>
+                            <div class="oreja izquierda"></div>
+                            <div class="oreja derecha"></div>
+                        </div>
+
+                        <div class="ubre">
+                            <div class="gota" id="gota"></div>
+                        </div>
+
+                        <div class="pata delantera"></div>
+                        <div class="pezuña delantera"></div>
+                        <div class="pata trasera"></div>
+                        <div class="pezuña trasera"></div>
+
+                        <div class="cola">
+                            <div class="pelo"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </section>
+      </div>
+
+        <section id="tab2" class="tab-content">
+            <h2>Contenido Tab 2</h2>
+            <p>Este es el contenido de la segunda pestaña.</p>
+        </section>
+
+        <section id="tab3" class="tab-content">
+            <h2>Contenido Tab 3</h2>
+            <p>Este es el contenido de la tercera pestaña.</p>
+        </section>
+
+        <section id="tab4" class="tab-content">
+            <h2>Contenido Tab 4</h2>
+            <p>Este es el contenido de la cuarta pestaña.</p>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Lácteos y Quesos Don Joaquin</h3>
+                <p>Elaboramos productos artesanales con el sabor fresco que nos distingue.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="ganado.html">Ganado</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contactos">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contáctanos</h3>
+                <p>Tel: +507 6000-0000</p>
+                <p>Email: info@donjoaquin.com</p>
+                <div class="social">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="facebook"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="instagram"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lácteos y Quesos Don Joaquin. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
