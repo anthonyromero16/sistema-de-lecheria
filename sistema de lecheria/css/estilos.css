@@ -1,0 +1,974 @@
+﻿/* ============================================================
+   ESTILOS GENERALES
+============================================================ */
+body {
+    margin: 0;
+    font-family: Calibri, sans-serif;
+}
+
+main {
+    padding: 40px;
+    background-color: #f7f7dc;
+}
+
+/* ============================================================
+   BARRA DE MENÚ
+============================================================ */
+nav.w3-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c19a85;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-bottom: 3px solid #4a2a1a; 
+}
+
+    /* ==== Enlaces ==== */
+    nav.w3-bar a {
+        color: #3b1f10 !important; 
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 19px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+        border-radius: 10px;
+        letter-spacing: 0.5px;
+    }
+
+        /* ==== Efecto hover ==== */
+        nav.w3-bar a:hover {
+            background-color: #f4e0dc !important; 
+            color: #2a0f00 !important; 
+            transform: scale(1.06);
+        }
+
+        /* ==== Enlace activo ==== */
+        nav.w3-bar a.active {
+            background-color: #5a3523 !important; 
+            color: #fff !important; 
+        }
+
+/* ==== Responsivo ==== */
+@media (max-width: 768px) {
+    nav.w3-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+        nav.w3-bar a {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 0;
+            border-bottom: 1px solid rgba(90, 53, 35, 0.3);
+        }
+
+            nav.w3-bar a:last-child {
+                border-bottom: none;
+            }
+}
+
+
+/* ============================================================
+   HEADER Y LOGO
+============================================================ */
+header {
+    position: relative;
+    background-image: url('https://lacteosdonjoaquin.com/wp-content/uploads/2019/11/cover-dj-home-1024x683.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    text-align: center;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 150px;
+    height: auto;
+}
+
+/* Subtítulo decorativo */
+.subtitulo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 15px;
+    font-style: normal;
+    color: #FFE8E8;
+    text-shadow: 1px 1px 3px #000;
+    margin-top: 10px;
+}
+
+/* ============================================================
+   REDES SOCIALES
+============================================================ */
+.redes-sociales {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+    .redes-sociales li {
+        margin: 0 15px;
+    }
+
+    .redes-sociales a svg {
+        transition: transform 0.3s, fill 0.3s;
+    }
+
+    .redes-sociales a:hover svg {
+        transform: scale(1.2);
+        fill: #FFD700;
+    }
+
+/* Redes en el header */
+.redes-header {
+    position: absolute;
+    top: 210px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+    .redes-header a svg {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s, fill 0.3s;
+    }
+
+    .redes-header a:hover svg {
+        transform: scale(1.2);
+        fill: #FFD700;
+    }
+
+/* ============================================================
+   SECCIONES PRINCIPALES (Bloques)
+============================================================ */
+@media (min-width: 68px) {
+
+    /* --------------------------
+       BLOQUE 1 - Bienvenida
+    --------------------------- */
+    .bloque-1 {
+        background-color: #c19a85;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 20px 0;
+        display: flex;
+        align-items: center; /* <-- hace que ambos (texto e imagen) tengan la misma altura */
+        gap: 20px;
+    }
+
+        /* Contenedor del texto */
+        .bloque-1 .dark_container {
+            flex: 1 1 60%;
+            background-color: #5a3523;
+            border-radius: 20px;
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+    /* Imagen lateral */
+    .imagen-lateral-container {
+        flex: 1 1 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagen-lateral {
+        width: 50%;
+        height: 50%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    /* Títulos y texto */
+    .bloque-1 .heading h3,
+    .bloque-1 .heading h4 {
+        color: white;
+        font-weight: 700;
+        margin: 5px 0;
+    }
+
+    .bloque-1 p {
+        color: white;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    /* --------------------------
+       BLOQUE 2 - Descripción
+    --------------------------- */
+    .bloque-2 {
+        padding: 20px;
+        margin: 10px auto;
+        border-radius: 25px;
+        background-color: #5a3523;
+        max-width: 500px;
+        text-align: center;
+        color: white;
+        line-height: 1.6;
+    }
+
+    /* --------------------------
+       BLOQUE 3 - Razas y Fincas
+    --------------------------- */
+    .bloque-3 {
+        background-color: #c19a85;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .subtitulo-3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    .bloque-3 .recuadros {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .bloque-3 .cuadro {
+        background-color: #5a3523;
+        color: white;
+        border-radius: 20px;
+        padding: 20px;
+        max-width: 300px;
+        text-align: center;
+    }
+
+        .bloque-3 .cuadro img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer {
+    background-color: #5a3523;
+    color: #f0f0f0;
+    padding: 40px 20px 20px;
+    clear: both;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+    .footer-col h3 {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .footer-col p,
+    .footer-col ul {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+            .footer-col ul li a {
+                color: #f0f0f0;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .footer-col ul li a:hover {
+                    color: #d9d3ce;
+                }
+
+/* Iconos sociales */
+.social a img {
+    width: 28px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+    .social a img:hover {
+        transform: scale(1.1);
+    }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #d9d3ce;
+    padding-top: 15px;
+}
+
+/*tab manager*/
+.tab-container {
+    margin: 20px 0;
+    font-family: Calibri, sans-serif; 
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    cursor: pointer;
+    background-color: #5a3523; 
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    transition: all 0.3s ease;
+}
+
+    .tab-btn:hover {
+        background-color: #7a4d3a; 
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .tab-btn.active {
+        background-color: #c19a85; 
+        color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+.tab-content {
+    display: none;
+    padding: 25px;
+    background-color: #f7f7dc; 
+    border-radius: 20px;
+    border: 1px solid #d9d3ce;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+
+/* ===== Sección de Razas Bovinas ===== */
+.texto_raza {
+    background-color: #c19a85; 
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 40px;
+    text-align: center; 
+    color: white;
+    line-height: 1.6; 
+}
+
+    .texto_raza h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .texto_raza p {
+        margin-bottom: 15px; 
+        font-size: 17px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* ---------- TEXTO PRINCIPAL TAB1 ---------- */
+.texto_raza {
+    background-color: #c19a85;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px auto;
+    color: white;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-family: 'Calibri', sans-serif;
+}
+
+    .texto_raza p {
+        background-color: #5a3523;
+        border-radius: 15px;
+        padding: 25px;
+        line-height: 1.7;
+        font-size: 17px;
+        margin: 0;
+        width: 90%;
+    }
+
+
+/* ---------- CARRUSEL ---------- */
+.carrusel-container {
+    position: relative;
+    max-width: 1000px; 
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #5a3523;
+    color: white;
+    padding: 40px 50px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.carrusel-slide {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+    .carrusel-item img {
+        max-width: 400px; 
+        height: 300px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        border: 2px solid #c19a85;
+        object-fit: cover;
+    }
+
+    .carrusel-item h4 {
+        margin: 10px 0;
+        font-size: 26px;
+        color: #EED6D3;
+    }
+
+    .carrusel-item p {
+        font-size: 17px;
+        line-height: 1.6;
+        color: #ffffff;
+        text-align: justify;
+        max-width: 850px;
+    }
+
+/* ---------- BOTONES DEL CARRUSEL ---------- */
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.6);
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 8px 18px;
+    border-radius: 50%;
+    color: #5a3523;
+    font-weight: bold;
+    user-select: none;
+    transition: background 0.3s;
+    z-index: 2;
+}
+
+    .carrusel-btn:hover {
+        background-color: rgba(238, 214, 211, 0.9);
+    }
+
+    .carrusel-btn.prev {
+        left: 20px;
+    }
+
+    .carrusel-btn.next {
+        right: 20px;
+    }
+
+/* === Animación ordeño === */
+.ordeño-container {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #c19a85;
+    border-radius: 20px;
+    position: relative;
+    padding-bottom: 150px;
+}
+
+.vaca {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    margin: 0 auto;
+    cursor: pointer;
+    z-index: 2;
+}
+
+    .vaca .cuerpo {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        background: #f4c97f;
+        border-radius: 100px 100px 80px 80px;
+        border: 2px solid #000;
+    }
+
+    .vaca .cabeza {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: #f4c97f;
+        border: 2px solid #000;
+        border-radius: 50%;
+        top: 20px;
+        left: -30px;
+    }
+
+    .vaca .ubre {
+        position: absolute;
+        width: 40px;
+        height: 25px;
+        background: pink;
+        border-radius: 15px;
+        bottom: 0;
+        left: 80px;
+    }
+.pata {
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    background: #f4c97f;
+    top: 100px;
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+}
+
+    .pata.delantera {
+        left: 40px;
+    }
+
+    .pata.trasera {
+        left: 140px;
+    }
+
+.pezuña {
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background: black;
+    top: 125px;
+    z-index: 1;
+}
+
+    .pezuña.delantera {
+        left: 40px;
+    }
+
+    .pezuña.trasera {
+        left: 140px;
+    }
+
+.hocico {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+    top: 35px;
+    left: 15px;
+    z-index: 4;
+}
+
+.ojo {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: black;
+    top: 15px;
+    z-index: 4;
+}
+
+    .ojo.izquierdo {
+        left: 15px;
+    }
+
+    .ojo.derecho {
+        left: 40px;
+    }
+
+.cuerno {
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    top: 0px;
+    z-index: 4;
+}
+
+    .cuerno.izquierdo {
+        left: 0px;
+        transform: rotate(-15deg);
+    }
+
+    .cuerno.derecho {
+        left: 45px;
+        transform: rotate(15deg);
+    }
+
+.oreja {
+    position: absolute;
+    width: 22px;
+    height: 9px;
+    background: #f4c97f; 
+    border-radius: 0; 
+    top: 10px;
+    z-index: 1;
+    border: 1px solid #000;
+}
+
+    .oreja.izquierda {
+        left: -16px; 
+        transform: rotate(-40deg);
+    }
+
+    .oreja.derecha {
+        left: 55px; 
+        transform: rotate(40deg);
+    }
+
+.cola {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background: #f4c97f;
+    border-radius: 0 0 5px 5px;
+    top: 10px;
+    right: -10px;
+    z-index: 0;
+    transform: rotate(-40deg);
+}
+
+    .cola .pelo {
+        position: absolute;
+        width: 13px;
+        height: 15px;
+        background: black;
+        border-radius: 0;
+        bottom: -15px;
+        left: -2px;
+    }
+
+.gota {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.cubo {
+    width: 60px;
+    height: 50px;
+    background: silver;
+    border: 2px solid #555;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: transform 1s ease-in-out;
+}
+
+.cubo-lleno-salir {
+    transform: translate(150vw, 0);
+}
+
+.cubo-nuevo-entrar {
+    transform: translate(150vw, 0);
+    transition: transform 0s; 
+}
+
+.leche {
+    position: absolute;
+    width: 100%;
+    height: 0; 
+    background: #f0f8ff; 
+    bottom: 0;
+    left: 0;
+    transition: height 0.5s ease; 
+}
+
+:root {
+    --bg: #f8f5f2; /* fondo general */
+    --card: #ffffff; /* fondo de tarjetas/modal */
+    --accent: #c19a85; /* color principal / botones / títulos */
+    --muted: #7d4c32; /* texto secundario / meta */
+    --danger: #5a3523; /* alertas / salud mala */
+    --warn: #d9d3ce; /* alertas moderadas */
+    --ok: #3c2b23; /* salud buena / positivo */
+}
+
+body {
+    font-family: Inter, system-ui, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--muted);
+}
+
+/* GRID DE TARJETAS */
+.wrap {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    gap: 14px;
+}
+
+.card {
+    background: var(--card);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: transform .12s;
+}
+
+    .card:hover {
+        transform: translateY(-4px);
+    }
+
+    .card .title {
+        font-weight: 600;
+        color: var(--accent);
+    }
+
+.meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    background: #e8ded7;
+    color: var(--accent);
+    margin-top: 8px;
+}
+
+/* MODAL */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(60,43,35,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 50;
+}
+
+.modal {
+    width: 100%;
+    max-width: 920px;
+    background: var(--card);
+    border-radius: 12px;
+    overflow: auto;
+    max-height: 92vh;
+    box-shadow: 0 12px 40px rgba(60,43,35,0.36);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e8ded7;
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 18px;
+    padding: 18px;
+}
+
+.close-btn {
+    background: #f8f5f2;
+    border: 0;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+/* LEFT COLUMN */
+.profile {
+    padding: 12px;
+}
+
+.photo {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(135deg,#e8ded7,#f8f5f2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 28px;
+}
+
+.info-row {
+    margin-top: 12px;
+}
+
+    .info-row b {
+        display: block;
+    }
+
+.stat-grid {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.stat {
+    flex: 1;
+    background: #f8f5f2;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+    .stat .num {
+        font-weight: 700;
+        color: var(--accent);
+    }
+
+/* RIGHT COLUMN */
+.section {
+    background: var(--card);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+    .section h3 {
+        margin: 0 0 8px;
+        font-size: 14px;
+        color: var(--accent);
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    table td {
+        padding: 6px 8px;
+        border-top: 1px solid #e8ded7;
+    }
+
+.health-pill {
+    display: inline-block;
+    padding: 6px 8px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+.ok {
+    background: #d9d3ce;
+    color: #3c2b23;
+}
+
+.warn {
+    background: #e8ded7;
+    color: #7d4c32;
+}
+
+.bad {
+    background: #c19a85;
+    color: #ffffff;
+}
+
+/* responsive */
+@media (max-width:880px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        height: 180px;
+    }
+}
+
+
+
+
