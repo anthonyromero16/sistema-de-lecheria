@@ -1,44 +1,91 @@
-﻿/* Barra de menú transparente */
-nav.w3-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent; /* transparente */
-    padding: 12px 0;
-    position: relative; /* 👈 AQUÍ defines la posición */
-    top: 0; /* 👈 Esto hace que quede pegada arriba */
-    width: 100%; /* Ocupa todo el ancho */
-    z-index: 1000; /* Se superpone sobre otros elementos */
-}
- 
-/* Botones del menú sobre la imagen */
-nav.w3-bar a {
-    color: #5a3523 !important;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    text-shadow: 1px 1px 4px black; /* mejora visibilidad sobre la imagen */
-    transition: background 0.3s, color 0.3s;
-}
-
-    nav.w3-bar a:hover {
-        background-color: #EED6D3 !important; /* un ligero fondo al pasar el mouse */
-        color: #3B0404 !important;
-    }
-
+﻿/* ============================================================
+   ESTILOS GENERALES
+============================================================ */
 body {
     margin: 0;
     font-family: Calibri, sans-serif;
 }
 
-/* Header con imagen completa */
+main {
+    padding: 40px;
+    background-color: #f7f7dc;
+}
+
+/* ============================================================
+   BARRA DE MENÚ
+============================================================ */
+nav.w3-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c19a85;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-bottom: 3px solid #4a2a1a; 
+}
+
+    /* ==== Enlaces ==== */
+    nav.w3-bar a {
+        color: #3b1f10 !important; 
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 19px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+        border-radius: 10px;
+        letter-spacing: 0.5px;
+    }
+
+        /* ==== Efecto hover ==== */
+        nav.w3-bar a:hover {
+            background-color: #f4e0dc !important; 
+            color: #2a0f00 !important; 
+            transform: scale(1.06);
+        }
+
+        /* ==== Enlace activo ==== */
+        nav.w3-bar a.active {
+            background-color: #5a3523 !important; 
+            color: #fff !important; 
+        }
+
+/* ==== Responsivo ==== */
+@media (max-width: 768px) {
+    nav.w3-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+        nav.w3-bar a {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 0;
+            border-bottom: 1px solid rgba(90, 53, 35, 0.3);
+        }
+
+            nav.w3-bar a:last-child {
+                border-bottom: none;
+            }
+}
+
+
+/* ============================================================
+   HEADER Y LOGO
+============================================================ */
 header {
     position: relative;
     background-image: url('https://lacteosdonjoaquin.com/wp-content/uploads/2019/11/cover-dj-home-1024x683.jpg');
     background-size: cover;
     background-position: center;
-    height: 250px; /* altura del header */
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,34 +95,31 @@ header {
     text-align: center;
 }
 
-/* esta vaina es para el logo  */
 .logo-header {
     position: absolute;
-    top: 40px; /* Ajusta la altura */
-    left: 20px; /* Pegado a la esquina izquierda */
-    width: 150px; /* Tamaño del logo */
+    top: 40px;
+    left: 20px;
+    width: 150px;
     height: auto;
 }
 
-main {
-    padding: 40px;
-    background-color: #f7f7dc;
-}
-
-
+/* Subtítulo decorativo */
 .subtitulo {
-    font-family: 'Great Vibes', cursive; /* Tipografía */
-    font-size: 15px; /* Tamaño */
-    font-style: normal; /* Cursiva */
-    color: #FFE8E8; /* Color */
-    text-shadow: 1px 1px 3px #000; /* Sombrita para destacar */
+    font-family: 'Great Vibes', cursive;
+    font-size: 15px;
+    font-style: normal;
+    color: #FFE8E8;
+    text-shadow: 1px 1px 3px #000;
     margin-top: 10px;
 }
-/*////////////////////////////////////////////////////////////////////////////////*/
+
+/* ============================================================
+   REDES SOCIALES
+============================================================ */
 .redes-sociales {
     list-style: none;
     display: flex;
-    justify-content: center; /* centra los íconos */
+    justify-content: center;
     align-items: center;
     padding: 0;
     margin: 20px 0;
@@ -90,21 +134,17 @@ main {
     }
 
     .redes-sociales a:hover svg {
-        transform: scale(1.2); /* efecto zoom */
-        fill: #FFD700; /* cambia de color al pasar el mouse */
+        transform: scale(1.2);
+        fill: #FFD700;
     }
 
-
-
-
-
-/* Contenedor de redes sociales */
+/* Redes en el header */
 .redes-header {
-    position: absolute; /* relativo al header */
-    top: 210px; /* desde la parte superior */
-    right: 30px; /* desde la parte derecha */
-    display: flex; /* alinear los iconos en línea */
-    gap: 15px; /* espacio entre iconos */
+    position: absolute;
+    top: 210px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
 }
 
     .redes-header a svg {
@@ -115,130 +155,95 @@ main {
 
     .redes-header a:hover svg {
         transform: scale(1.2);
-        fill: #FFD700; /* color al pasar el mouse */
+        fill: #FFD700;
     }
 
+/* ============================================================
+   SECCIONES PRINCIPALES (Bloques)
+============================================================ */
 @media (min-width: 68px) {
-    .col-md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
 
-    .heading {
-        margin-bottom: 60px !important;
-    }
-
-    /*///////////////////////////////////////////////////////////////////*/
-
-    /* Contenedor genérico Bloque 1 */
+    /* --------------------------
+       BLOQUE 1 - Bienvenida
+    --------------------------- */
     .bloque-1 {
-        margin-top: 20px; /* menos separación arriba */
-        margin-bottom: 20px; /* menos separación abajo (acerca al bloque 2) */
-    }
-
-    .container.bloque-1 {
-        margin-top: 20px; /* en lugar de 40px */
-    }
-
-    .bloque-1 .row.align-items-stretch {
+        background-color: #c19a85;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 20px 0;
         display: flex;
-        justify-content: center;
-        align-items: stretch; /* iguala la altura de cuadro e imagen */
+        align-items: center; /* <-- hace que ambos (texto e imagen) tengan la misma altura */
         gap: 20px;
     }
-    /* Caja oscuro */
-    /* Controla el tamaño del cuadro */
-    .bloque-1 .dark_container {
-        flex: 1;
-        min-height: 300px; /* 👉 altura fija del cuadro */
-        max-height: 300px; /* opcional, límite */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        background-color: #5a3523;
-        border-radius: 25px;
-        color: white;
-    }
 
-    /* Títulos */
-    .bloque-1 .heading {
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-        .bloque-1 .heading h3,
-        .bloque-1 .heading h4 {
+        /* Contenedor del texto */
+        .bloque-1 .dark_container {
+            flex: 1 1 60%;
+            background-color: #5a3523;
+            border-radius: 20px;
             color: white;
-            font-weight: 700;
-            margin: 0;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            box-sizing: border-box;
         }
 
-    /* Texto */
+    /* Imagen lateral */
+    .imagen-lateral-container {
+        flex: 1 1 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagen-lateral {
+        width: 50%;
+        height: 50%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    /* Títulos y texto */
+    .bloque-1 .heading h3,
+    .bloque-1 .heading h4 {
+        color: white;
+        font-weight: 700;
+        margin: 5px 0;
+    }
+
     .bloque-1 p {
-        text-align: center;
         color: white;
         line-height: 1.6;
+        margin-bottom: 10px;
     }
 
-    /* Fila centrada */
-    .row.align-items-stretch {
-        display: flex;
-        justify-content: center; /* centra el conjunto cuadro + imagen */
-        align-items: stretch; /* hace que ambos tengan la misma altura */
-        gap: 20px; /* espacio entre cuadro e imagen */
-    }
-
-    .dark_container {
-        flex: 1; /* Ocupa todo el espacio disponible */
-    }
-    .bloque-1 .dark_container {
-        min-height: 350px; /* Altura mínima */
-        max-height: 400px; /* Altura máxima opcional */
-    }
-
-    /* Imagen */
-    /* Imagen del lado */
-    .imagen-lateral {
-        flex: .3;
-        width: 0%;
-        height: 24%; /* altura al cuad */
-        object-fit: cover; /* recorta sin deformar */
-        border-radius: 25px;
-    }
-    /*bloque de la seccion del segundo cuadro de texto*/
+    /* --------------------------
+       BLOQUE 2 - Descripción
+    --------------------------- */
     .bloque-2 {
         padding: 20px;
-        margin-top: 10px;
+        margin: 10px auto;
         border-radius: 25px;
-        color: white;
-        flex: 1;
-        align-content: center;
-        margin: 0 auto;
-    }
- 
-    .bloque-2 {
         background-color: #5a3523;
         max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
         text-align: center;
+        color: white;
         line-height: 1.6;
     }
 
-    /*cuadro de las raza de vacas lecheras*/
+    /* --------------------------
+       BLOQUE 3 - Razas y Fincas
+    --------------------------- */
     .bloque-3 {
+        background-color: #c19a85;
+        padding: 20px;
+        border-radius: 20px;
         text-align: center;
         margin-top: 40px;
     }
 
-    .bloque-3 {
-        background-color: #c19a85; /* color detrás de los cuadros */
-        padding: 20px; /* espacio interno */
-        border-radius: 20px;
-    }
-
-    /* subtítulo encima de los cuadros */
     .subtitulo-3 {
         margin-bottom: 20px;
         font-size: 20px;
@@ -246,39 +251,37 @@ main {
         color: white;
     }
 
-    /* fila que contiene los tres cuadros */
     .bloque-3 .recuadros {
-        display: flex; /* pone los hijos en fila */
-        justify-content: center; /* centra toda la fila */
-        gap: 20px; /* espacio entre recuadros */
-        flex-wrap: wrap; /* permite que bajen si la pantalla es muy estrecha */
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 
-    /* estilo individual de cada cuadro */
     .bloque-3 .cuadro {
         background-color: #5a3523;
         color: white;
         border-radius: 20px;
         padding: 20px;
-        max-width: 300px; /* ancho máximo de cada recuadro */
+        max-width: 300px;
         text-align: center;
     }
 
         .bloque-3 .cuadro img {
             width: 100%;
-            border-radius: 15px;
-            max-height: 200px; /* altura máxima igual para todas */
+            max-height: 200px;
             object-fit: cover;
+            border-radius: 15px;
         }
 }
 
-
-/*/////////////////////////////////////////////////estilos footer//////////////////////////////////////*/
+/* ============================================================
+   FOOTER
+============================================================ */
 footer {
     background-color: #5a3523;
     color: #f0f0f0;
     padding: 40px 20px 20px;
-    margin-top: 40px;
     clear: both;
     position: relative;
     z-index: 1;
@@ -303,7 +306,8 @@ footer {
         font-size: 20px;
     }
 
-    .footer-col p, .footer-col ul {
+    .footer-col p,
+    .footer-col ul {
         font-size: 16px;
         line-height: 1.6;
     }
@@ -327,6 +331,7 @@ footer {
                     color: #d9d3ce;
                 }
 
+/* Iconos sociales */
 .social a img {
     width: 28px;
     margin-right: 10px;
@@ -343,4 +348,890 @@ footer {
     font-size: 14px;
     border-top: 1px solid #d9d3ce;
     padding-top: 15px;
+}
+
+/*tab manager*/
+.tab-container {
+    margin: 20px 0;
+    font-family: Calibri, sans-serif; 
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    cursor: pointer;
+    background-color: #5a3523; 
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    transition: all 0.3s ease;
+}
+
+    .tab-btn:hover {
+        background-color: #7a4d3a; 
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .tab-btn.active {
+        background-color: #c19a85; 
+        color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+.tab-content {
+    display: none;
+    padding: 25px;
+    background-color: #f7f7dc; 
+    border-radius: 20px;
+    border: 1px solid #d9d3ce;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+
+/* ===== Sección de Razas Bovinas ===== */
+.texto_raza {
+    background-color: #c19a85; 
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 40px;
+    text-align: center; 
+    color: white;
+    line-height: 1.6; 
+}
+
+    .texto_raza h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .texto_raza p {
+        margin-bottom: 15px; 
+        font-size: 17px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* ---------- TEXTO PRINCIPAL TAB1 ---------- */
+.texto_raza {
+    background-color: #c19a85;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px auto;
+    color: white;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-family: 'Calibri', sans-serif;
+}
+
+    .texto_raza p {
+        background-color: #5a3523;
+        border-radius: 15px;
+        padding: 25px;
+        line-height: 1.7;
+        font-size: 17px;
+        margin: 0;
+        width: 90%;
+    }
+
+
+/* ---------- CARRUSEL ---------- */
+.carrusel-container {
+    position: relative;
+    max-width: 1000px; 
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #5a3523;
+    color: white;
+    padding: 40px 50px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.carrusel-slide {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+    .carrusel-item img {
+        max-width: 400px; 
+        height: 300px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        border: 2px solid #c19a85;
+        object-fit: cover;
+    }
+
+    .carrusel-item h4 {
+        margin: 10px 0;
+        font-size: 26px;
+        color: #EED6D3;
+    }
+
+    .carrusel-item p {
+        font-size: 17px;
+        line-height: 1.6;
+        color: #ffffff;
+        text-align: justify;
+        max-width: 850px;
+    }
+
+/* ---------- BOTONES DEL CARRUSEL ---------- */
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.6);
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 8px 18px;
+    border-radius: 50%;
+    color: #5a3523;
+    font-weight: bold;
+    user-select: none;
+    transition: background 0.3s;
+    z-index: 2;
+}
+
+    .carrusel-btn:hover {
+        background-color: rgba(238, 214, 211, 0.9);
+    }
+
+    .carrusel-btn.prev {
+        left: 20px;
+    }
+
+    .carrusel-btn.next {
+        right: 20px;
+    }
+
+/* === Animación ordeño === */
+.ordeño-container {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #c19a85;
+    border-radius: 20px;
+    position: relative;
+    padding-bottom: 150px;
+}
+
+.vaca {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    margin: 0 auto;
+    cursor: pointer;
+    z-index: 2;
+}
+
+    .vaca .cuerpo {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        background: #f4c97f;
+        border-radius: 100px 100px 80px 80px;
+        border: 2px solid #000;
+    }
+
+    .vaca .cabeza {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: #f4c97f;
+        border: 2px solid #000;
+        border-radius: 50%;
+        top: 20px;
+        left: -30px;
+    }
+
+    .vaca .ubre {
+        position: absolute;
+        width: 40px;
+        height: 25px;
+        background: pink;
+        border-radius: 15px;
+        bottom: 0;
+        left: 80px;
+    }
+.pata {
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    background: #f4c97f;
+    top: 100px;
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+}
+
+    .pata.delantera {
+        left: 40px;
+    }
+
+    .pata.trasera {
+        left: 140px;
+    }
+
+.pezuña {
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background: black;
+    top: 125px;
+    z-index: 1;
+}
+
+    .pezuña.delantera {
+        left: 40px;
+    }
+
+    .pezuña.trasera {
+        left: 140px;
+    }
+
+.hocico {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+    top: 35px;
+    left: 15px;
+    z-index: 4;
+}
+
+.ojo {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: black;
+    top: 15px;
+    z-index: 4;
+}
+
+    .ojo.izquierdo {
+        left: 15px;
+    }
+
+    .ojo.derecho {
+        left: 40px;
+    }
+
+.cuerno {
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    top: 0px;
+    z-index: 4;
+}
+
+    .cuerno.izquierdo {
+        left: 0px;
+        transform: rotate(-15deg);
+    }
+
+    .cuerno.derecho {
+        left: 45px;
+        transform: rotate(15deg);
+    }
+
+.oreja {
+    position: absolute;
+    width: 22px;
+    height: 9px;
+    background: #f4c97f; 
+    border-radius: 0; 
+    top: 10px;
+    z-index: 1;
+    border: 1px solid #000;
+}
+
+    .oreja.izquierda {
+        left: -16px; 
+        transform: rotate(-40deg);
+    }
+
+    .oreja.derecha {
+        left: 55px; 
+        transform: rotate(40deg);
+    }
+
+.cola {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background: #f4c97f;
+    border-radius: 0 0 5px 5px;
+    top: 10px;
+    right: -10px;
+    z-index: 0;
+    transform: rotate(-40deg);
+}
+
+    .cola .pelo {
+        position: absolute;
+        width: 13px;
+        height: 15px;
+        background: black;
+        border-radius: 0;
+        bottom: -15px;
+        left: -2px;
+    }
+
+.gota {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.cubo {
+    width: 60px;
+    height: 50px;
+    background: silver;
+    border: 2px solid #555;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: transform 1s ease-in-out;
+}
+
+.cubo-lleno-salir {
+    transform: translate(150vw, 0);
+}
+
+.cubo-nuevo-entrar {
+    transform: translate(150vw, 0);
+    transition: transform 0s; 
+}
+
+.leche {
+    position: absolute;
+    width: 100%;
+    height: 0; 
+    background: #f0f8ff; 
+    bottom: 0;
+    left: 0;
+    transition: height 0.5s ease; 
+}
+
+:root {
+    --bg: #f8f5f2; /* fondo general */
+    --card: #ffffff; /* fondo de tarjetas/modal */
+    --accent: #c19a85; /* color principal / botones / títulos */
+    --muted: #7d4c32; /* texto secundario / meta */
+    --danger: #5a3523; /* alertas / salud mala */
+    --warn: #d9d3ce; /* alertas moderadas */
+    --ok: #3c2b23; /* salud buena / positivo */
+}
+
+body {
+    font-family: Inter, system-ui, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--muted);
+}
+
+/* GRID DE TARJETAS */
+.wrap {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    gap: 14px;
+}
+
+.card {
+    background: var(--card);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: transform .12s;
+}
+
+    .card:hover {
+        transform: translateY(-4px);
+    }
+
+    .card .title {
+        font-weight: 600;
+        color: var(--accent);
+    }
+
+.meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    background: #e8ded7;
+    color: var(--accent);
+    margin-top: 8px;
+}
+
+/* MODAL */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(60,43,35,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 150; 
+}
+
+.modal {
+    width: 100%;
+    max-width: 920px;
+    background: var(--card);
+    border-radius: 12px;
+    overflow: auto;
+    max-height: 92vh;
+    box-shadow: 0 12px 40px rgba(60,43,35,0.36);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e8ded7;
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 18px;
+    padding: 18px;
+}
+
+.close-btn {
+    background: #f8f5f2;
+    border: 0;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+/* LEFT COLUMN */
+.profile {
+    padding: 12px;
+}
+
+.photo {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(135deg,#e8ded7,#f8f5f2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 28px;
+}
+
+.info-row {
+    margin-top: 12px;
+}
+
+    .info-row b {
+        display: block;
+    }
+
+.stat-grid {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.stat {
+    flex: 1;
+    background: #f8f5f2;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+    .stat .num {
+        font-weight: 700;
+        color: var(--accent);
+    }
+
+/* RIGHT COLUMN */
+.section {
+    background: var(--card);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+    .section h3 {
+        margin: 0 0 8px;
+        font-size: 14px;
+        color: var(--accent);
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    table td {
+        padding: 6px 8px;
+        border-top: 1px solid #e8ded7;
+    }
+
+.health-pill {
+    display: inline-block;
+    padding: 6px 8px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+.ok {
+    background: #d9d3ce;
+    color: #3c2b23;
+}
+
+.warn {
+    background: #e8ded7;
+    color: #7d4c32;
+}
+
+.bad {
+    background: #c19a85;
+    color: #ffffff;
+}
+
+/* responsive */
+@media (max-width:880px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        height: 180px;
+    }
+}
+
+/* ============================================================
+   CALENDARIO DE SALUD
+============================================================ */
+
+.health-container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Sidebar con calendario */
+.calendar-sidebar {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    height: fit-content;
+}
+
+.mini-calendar {
+    margin-bottom: 25px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+    .calendar-header button {
+        background: var(--accent);
+        color: white;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .calendar-header h3 {
+        margin: 0;
+        font-size: 16px;
+        color: var(--muted);
+    }
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .calendar-day.empty {
+        background: transparent;
+        cursor: default;
+    }
+
+    .calendar-day.today {
+        background: var(--accent);
+        color: white;
+        font-weight: bold;
+    }
+
+    .calendar-day.has-event {
+        background: #e8f4fd;
+        color: #1a73e8;
+        font-weight: bold;
+        position: relative;
+    }
+
+        .calendar-day.has-event::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: #1a73e8;
+            border-radius: 50%;
+        }
+
+.upcoming-events h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--muted);
+}
+
+.event-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+    font-size: 13px;
+}
+
+.event-date {
+    font-weight: bold;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.event-desc {
+    margin-top: 4px;
+}
+
+/* Lista de vacas */
+.cows-list {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+    .search-box input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+.cows-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.cow-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #e9ecef;
+}
+
+    .cow-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        border-color: var(--accent);
+    }
+
+.cow-name {
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.cow-id {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.cow-next-event {
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Modal de salud */
+.health-modal-body {
+    display: block;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.cow-profile {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.cow-photo {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #e8ded7, #f8f5f2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.cow-info {
+    flex: 1;
+}
+
+.health-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.health-section {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+    .health-section h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: var(--accent);
+    }
+
+.treatment-item, .vaccine-item, .control-item {
+    background: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+    font-size: 13px;
+}
+
+.treatment-date, .vaccine-date, .control-date {
+    font-weight: bold;
+    color: var(--muted);
+}
+
+.treatment-desc, .vaccine-desc, .control-desc {
+    margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .health-container {
+        grid-template-columns: 1fr;
+    }
+
+    .health-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .cow-profile {
+        flex-direction: column;
+        text-align: center;
+    }
 }

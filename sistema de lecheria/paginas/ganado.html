@@ -7,6 +7,7 @@
 
     <!-- Enlace al archivo CSS externo -->
     <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/script.js" defer></script>
     <title>Lácteos y Quesos | Airehcel Principal</title>
     <link rel="icon" href="../imagenes/logos/Logo-Lacteos-Quesos-Don-Joaquin.png" type="image/png">
 </head>
@@ -27,7 +28,7 @@
                 124.72V195.3H86.4V288h44.83v224h92.66V288z" />
                 </svg>
             </a>
-
+            
             <!-- Instagram -->
             <a href="https://www.instagram.com/donjoaquinlacteos/" target="_blank">
                 <svg width="24" height="24" viewBox="0 0 448 512">
@@ -52,6 +53,7 @@
         <h1>Bienvenidos a Lácteos y Quesos Don Joaquin</h1>
         <p class="subtitulo">El sabor fresco y artesanal que nos distingue</p>
     </header>
+
     <!--Barra de menu-->
     <nav class="w3-bar">
         <a href="principal.html" class="w3-button w3-bar-item">HOME</a>
@@ -63,9 +65,291 @@
     </nav>
     <main>
 
-        
+        <div class="tab-container1">
+
+            <!-- Botones de las pestañas -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="openTab(event, 'tab1')">Razas de Ganado</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab2')">Codigo de Ganado</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab3')">Dashboard de produccion</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab4')">Calendario de salud</button>
+            </div>
+
+            <!-- Contenido de las pestañas -->
+            <section id="tab1" class="tab-content active">
+                <h2>Diferentes razas bovinas que se utilizan en nuestras producción</h2>
+                <div class="texto_raza">
+                    <p>
+                        En Lechería Don Joaquín trabajamos con razas bovinas cuidadosamente seleccionadas por su alta calidad, productividad y adaptación al clima de nuestras fincas.
+                        Cada raza cumple un papel importante dentro de nuestro sistema de producción, garantizando leche de excelente sabor, pureza y valor nutricional.
+
+                        Nuestras vacas provienen de líneas genéticas reconocidas por su eficiencia lechera, resistencia y buen temperamento, lo que permite mantener un manejo sostenible y respetuoso con los animales.
+                        Gracias a la combinación de distintas razas especializadas, logramos equilibrar la cantidad y calidad de la leche, además de fortalecer la salud y bienestar del ganado.
+
+                        En esta sección te presentaremos las principales razas con las que trabajamos, sus características, ventajas productivas y cómo contribuyen al éxito de nuestra lechería.
+                        Nuestro compromiso es seguir mejorando cada generación de animales para ofrecer siempre los mejores productos lácteos del campo panameño.
+                    </p>
+                </div>
+
+                <div class="carrusel-container">
+                    <button class="carrusel-btn prev">&lt;</button>
+
+                    <div class="carrusel-slide">
+                        <div class="carrusel-item active">
+                            <img src="../imagenes/imagenes-razas/Vaca_Holstein_Carrusel.jpg" alt="Holstein">
+                            <h4>Holstein</h4>
+                            <p>
+                                La raza Holstein, originaria de los Países Bajos, es reconocida mundialmente por su altísima producción de leche.
+                                Estas vacas destacan por su gran tamaño, temperamento dócil y su característico pelaje blanco con manchas negras.
+
+                                Aunque su leche tiene un contenido moderado de grasa, la cantidad que producen por vaca es excepcional,
+                                lo que las convierte en la raza más utilizada en sistemas lecheros intensivos.
+
+                                En nuestras granjas, la Holstein es fundamental para garantizar un alto volumen de leche diaria
+                                y mantener una base productiva estable.
+                            </p>
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="../imagenes/imagenes-razas/Vaca_sindhi_Carrusel.png" alt="Sindhi">
+                            <h4>Sindhi</h4>
+                            <p>
+                                La raza Sindhi, originaria de Pakistán, es una de las razas cebuinas más valoradas
+                                por su excelente adaptación a climas cálidos y húmedos.
+
+                                Posee una gran resistencia a enfermedades tropicales, buena fertilidad y longevidad.
+                                Aunque su producción de leche es menor comparada con la Holstein, su leche es rica en sólidos y grasa,
+                                ideal para la elaboración de derivados lácteos.
+
+                                En nuestras fincas, el Sindhi se utiliza para mejorar la rusticidad del hato
+                                y mantener la producción constante incluso en condiciones ambientales exigentes.
+                            </p>
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="../imagenes/imagenes-razas/Vaca_jersey_Carrusel.jpg" alt="Jersey">
+                            <h4>Jersey</h4>
+                            <p>
+                                La raza Jersey, proveniente de la Isla de Jersey en Inglaterra, es conocida por producir leche
+                                con un alto contenido de grasa y proteína, ideal para fabricar quesos, mantequilla y otros productos lácteos de calidad.
+
+                                Son vacas de tamaño pequeño a mediano, muy eficientes en el uso del alimento y de temperamento tranquilo.
+
+                                En nuestras granjas, la Jersey se emplea para mejorar la calidad composicional de la leche
+                                y equilibrar la producción total del hato junto con otras razas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="carrusel-btn next">&gt;</button>
+                </div>
+
+                <!-- Animación: vaca siendo ordeñada -->
+                <div class="ordeño-container">
+                    <h3>Haz clic en la vaca para ordeñarla</h3>
+
+                    <div class="vaca" id="vaca">
+                        <div class="cuerpo"></div>
+
+                        <div class="cabeza">
+                            <div class="hocico"></div>
+                            <div class="ojo izquierdo"></div>
+                            <div class="ojo derecho"></div>
+                            <div class="cuerno izquierdo"></div>
+                            <div class="cuerno derecho"></div>
+                            <div class="oreja izquierda"></div>
+                            <div class="oreja derecha"></div>
+                        </div>
+
+                        <div class="ubre">
+                            <div class="gota" id="gota"></div>
+                        </div>
+
+                        <div class="pata delantera"></div>
+                        <div class="pezuña delantera"></div>
+                        <div class="pata trasera"></div>
+                        <div class="pezuña trasera"></div>
+
+                        <div class="cola">
+                            <div class="pelo"></div>
+                        </div>
+                    </div>
+
+                </div>
 
 
+            </section>
+        </div>
+        <!--Ficha de modal animal-->
+        <section id="tab2" class="tab-content">
+            <h2>Ficha de animales — Producción y salud</h2>
+
+            <div class="wrap">
+                <h3>Registro de vacas — Haz clic para ver detalles</h3>
+                <div class="grid" id="cowGrid"></div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal-backdrop" id="backdrop">
+                <div class="modal" role="dialog" aria-labelledby="modalTitle">
+                    <div class="modal-header">
+                        <div>
+                            <strong id="modalTitle">Ficha de animal</strong>
+                            <div id="modalSub" style="font-size:13px;color:var(--muted)"></div>
+                        </div>
+                        <div>
+                            <button class="close-btn" id="printBtn">Imprimir</button>
+                            <button class="close-btn" id="closeBtn">Cerrar ✕</button>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="profile">
+                            <div class="photo" id="photo">VACA</div>
+                            <div class="info-row"><b id="tagId">ID: -</b><span id="breed">Raza: -</span></div>
+                            <div class="info-row"><b>Estado reproductivo</b><div id="repro">-</div></div>
+
+                            <div class="stat-grid">
+                                <div class="stat"><div style="font-size:12px;color:var(--muted)">Producción (L/día)</div><div class="num" id="curProd">-</div></div>
+                                <div class="stat"><div style="font-size:12px;color:var(--muted)">Últ. control</div><div class="num" id="lastCheck">-</div></div>
+                                <div class="stat"><div style="font-size:12px;color:var(--muted)">Edad</div><div class="num" id="age">-</div></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="section">
+                                <h3>Producción — Últimos 7 días</h3>
+                                <canvas id="prodChart" width="480" height="120" style="width:100%;height:120px;border-radius:8px;background:#fbfdff"></canvas>
+                                <div style="margin-top:8px;font-size:13px;color:var(--muted)">Promedio: <strong id="avgProd">-</strong> L/día</div>
+                            </div>
+
+                            <div class="section">
+                                <h3>Salud y controles</h3>
+                                <div style="margin-bottom:8px">
+                                    <span class="health-pill ok" id="tempPill">Temp: -</span>
+                                    <span class="health-pill warn" id="lamenessPill">Cojera: -</span>
+                                    <span class="health-pill" id="bcsPill">BCS: -</span>
+                                </div>
+                                <table>
+                                    <tr><td style="width:160px">Vacunas</td><td id="vaccines">-</td></tr>
+                                    <tr><td>Última revisión</td><td id="lastExam">-</td></tr>
+                                    <tr><td>Notas</td><td id="notes">-</td></tr>
+                                </table>
+                            </div>
+
+                            <div class="section">
+                                <h3>Eventos recientes</h3>
+                                <div id="eventsList" style="font-size:13px;color:var(--muted)">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Importa los archivos específicos de esta pestaña -->
+        <link rel="stylesheet" href="../css/ficha-animal.css">
+        <script src="../js/ficha-animal.js" defer></script>
+
+
+        <section id="tab3" class="tab-content">
+            <h2>Contenido Tab 3</h2>
+            <p>Este es el contenido de la tercera pestaña.</p>
+        </section>
+
+        <section id="tab4" class="tab-content">
+            <h2>📅 Calendario de Salud </h2>
+
+            <div class="health-container">
+                <!-- Panel izquierdo: Mini calendario y próximas citas -->
+                <div class="calendar-sidebar">
+                    <div class="mini-calendar">
+                        <div class="calendar-header">
+                            <button id="prevMonth">&lt;</button>
+                            <h3 id="currentMonth">Septiembre 2025</h3>
+                            <button id="nextMonth">&gt;</button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Días del mes se generarán con JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="upcoming-events">
+                        <h3>Próximas Citas</h3>
+                        <div id="upcomingList">
+                            <!-- Eventos próximos se cargarán aquí -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel derecho: Lista de vacas y sus tratamientos -->
+                <div class="cows-list">
+                    <h3>Lista de Vacas</h3>
+                    <div class="search-box">
+                        <input type="text" id="searchCow" placeholder="Buscar vaca por nombre o ID...">
+                    </div>
+                    <div class="cows-grid" id="cowsGrid">
+                        <!-- Lista de vacas se generará con JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para mostrar detalles de tratamientos -->
+        <div class="modal-backdrop health-modal" id="healthModalBackdrop">
+            <div class="modal health-modal-content" role="dialog" aria-labelledby="healthModalTitle">
+                <div class="modal-header">
+                    <div>
+                        <strong id="healthModalTitle">Tratamientos y Controles</strong>
+                        <div id="healthModalSub" style="font-size:13px;color:var(--muted)"></div>
+                    </div>
+                    <button class="close-btn" id="closeHealthModal">Cerrar ✕</button>
+                </div>
+
+                <div class="modal-body health-modal-body">
+                    <div class="cow-profile">
+                        <div class="cow-photo" id="cowPhoto">VACA</div>
+                        <div class="cow-info">
+                            <div class="info-row"><b id="cowId">ID: -</b></div>
+                            <div class="info-row"><b>Raza:</b> <span id="cowBreed">-</span></div>
+                            <div class="info-row"><b>Edad:</b> <span id="cowAge">-</span></div>
+                            <div class="info-row"><b>Estado reproductivo:</b> <span id="cowRepro">-</span></div>
+                        </div>
+                    </div>
+
+                    <div class="health-sections">
+                        <div class="health-section">
+                            <h3>📋 Tratamientos Programados</h3>
+                            <div id="scheduledTreatments">
+                                <!-- Tratamientos programados se cargarán aquí -->
+                            </div>
+                        </div>
+
+                        <div class="health-section">
+                            <h3>💉 Historial de Vacunación</h3>
+                            <div id="vaccinationHistory">
+                                <!-- Historial de vacunación se cargará aquí -->
+                            </div>
+                        </div>
+
+                        <div class="health-section">
+                            <h3>🩺 Controles de Salud</h3>
+                            <div id="healthControls">
+                                <!-- Controles de salud se cargarán aquí -->
+                            </div>
+                        </div>
+
+                        <div class="health-section">
+                            <h3>📝 Notas y Observaciones</h3>
+                            <div id="healthNotes">
+                                <!-- Notas de salud se cargarán aquí -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <script src="../js/calendario-salud.js" defer></script>
 
     </main>
 

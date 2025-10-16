@@ -99,11 +99,15 @@
     <Content Include="imagenes\imagenes-razas\Vaca-holstein.png" />
     <Content Include="imagenes\imagenes-razas\Vaca-jersey.png" />
     <Content Include="imagenes\imagenes-razas\Vaca-sindhi.png" />
+    <Content Include="imagenes\imagenes-razas\Vaca_Holstein_Carrusel.jpg" />
+    <Content Include="imagenes\imagenes-razas\Vaca_jersey_Carrusel.jpg" />
+    <Content Include="imagenes\imagenes-razas\Vaca_sindhi_Carrusel.png" />
     <Content Include="imagenes\img01.png" />
     <Content Include="imagenes\logos\Logo-Lacteos-Quesos-Don-Joaquin.png" />
     <Content Include="imagenes\Vaca-holstein.png" />
     <Content Include="imagenes\Vaca-jersey.png" />
     <Content Include="imagenes\Vaca-sindhi.png" />
+    <Content Include="js\script.js" />
     <Content Include="paginas\ganado.html" />
     <Content Include="paginas\principal.html" />
     <Content Include="Web.config" />
