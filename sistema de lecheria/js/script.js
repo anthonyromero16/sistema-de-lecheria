@@ -697,3 +697,87 @@ function formatDate(dateStr) {
         year: 'numeric'
     });
 }
+
+// === DASHBOARD INTERACTIVO ===
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Producción diaria (Lunes a Domingo)
+    const produccionDia = [
+        { dia: "Lunes", litros: 120 },
+        { dia: "Martes", litros: 140 },
+        { dia: "Miércoles", litros: 135 },
+        { dia: "Jueves", litros: 150 },
+        { dia: "Viernes", litros: 160 },
+        { dia: "Sábado", litros: 145 },
+        { dia: "Domingo", litros: 130 }
+    ];
+
+    const produccionRaza = [
+        { raza: "Holstein", litros: 320 },
+        { raza: "Jersey", litros: 280 },
+        { raza: "Sindhi", litros: 200 }
+    ];
+
+    const tipoLeche = [
+        { tipo: "Entera", litros: 300 },
+        { tipo: "Descremada", litros: 180 },
+        { tipo: "Orgánica", litros: 220 }
+    ];
+
+    // Función crear gráfico (ya con etiquetas alineadas)
+    function crearGrafico(id, datos, campo, valor) {
+        const contenedor = document.getElementById(id);
+        if (!contenedor) return;
+
+        const max = Math.max(...datos.map(d => d[valor]));
+        contenedor.innerHTML = "";
+
+        const labelsContainer = document.createElement("div");
+        labelsContainer.classList.add("labels");
+
+        datos.forEach((d, i) => {
+            const barra = document.createElement("div");
+            barra.classList.add("bar");
+            barra.dataset.altura = (d[valor] / max * 100);
+            barra.style.height = "0%";
+
+            // Colores
+            if (id === "produccionDia") barra.style.backgroundColor = "#4B8BF4";
+            if (id === "produccionRaza") {
+                if (d[campo] === "Holstein") barra.style.backgroundColor = "#4B8BF4";
+                if (d[campo] === "Jersey") barra.style.backgroundColor = "#F4B942";
+                if (d[campo] === "Sindhi") barra.style.backgroundColor = "#D66B4E";
+            }
+            if (id === "produccionLeche") {
+                if (d[campo] === "Entera") barra.style.backgroundColor = "#5CBA47";
+                if (d[campo] === "Descremada") barra.style.backgroundColor = "#F4A742";
+                if (d[campo] === "Orgánica") barra.style.backgroundColor = "#6E44FF";
+            }
+
+            // Valor encima
+            const valorTxt = document.createElement("div");
+            valorTxt.classList.add("value");
+            valorTxt.textContent = `${d[valor]} L`;
+            barra.appendChild(valorTxt);
+            contenedor.appendChild(barra);
+
+            // Etiqueta
+            const label = document.createElement("div");
+            label.classList.add("label");
+            label.textContent = d[campo];
+            labelsContainer.appendChild(label);
+
+            // Animación de subida
+            setTimeout(() => {
+                barra.style.height = barra.dataset.altura + "%";
+            }, i * 200);
+        });
+
+        contenedor.appendChild(labelsContainer);
+    }
+
+    crearGrafico("produccionDia", produccionDia, "dia", "litros");
+    crearGrafico("produccionRaza", produccionRaza, "raza", "litros");
+    crearGrafico("produccionLeche", tipoLeche, "tipo", "litros");
+});
+

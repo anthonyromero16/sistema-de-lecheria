@@ -251,8 +251,32 @@
 
 
         <section id="tab3" class="tab-content">
-            <h2>Contenido Tab 3</h2>
-            <p>Este es el contenido de la tercera pestaña.</p>
+            <h2>Dashboard Interactivo</h2>
+            <p>Visualización de producción de leche.</p>
+
+            <div id="dashboard">
+                <!-- Producción diaria -->
+                <div class="chart">
+                    <h3>Producción diaria (litros)</h3>
+                    <div class="bar-chart" id="produccionDia"></div>
+                </div>
+
+                <!-- Producción por raza -->
+                <div class="chart">
+                    <h3>Producción por raza (litros)</h3>
+                    <div class="bar-chart" id="produccionRaza"></div>
+                </div>
+
+                <!-- Producción por tipo de leche -->
+                <div class="chart">
+                    <h3>Producción por tipo de leche (litros)</h3>
+                    <div class="bar-chart" id="produccionLeche"></div>
+                </div>
+            </div>
+
+            <!-- Enlazamos los archivos externos -->
+            <link rel="stylesheet" href="../css/estilos.css">
+            <script src="../js/script.js" defer></script>
         </section>
 
         <section id="tab4" class="tab-content">
