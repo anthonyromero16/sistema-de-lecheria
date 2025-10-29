@@ -92,7 +92,19 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="imagenes\fincas\1.jpg" />
+    <Content Include="imagenes\fincas\2.jpg" />
+    <Content Include="imagenes\fincas\3.png" />
+    <Content Include="imagenes\imagenes-razas\Vaca-holstein.png" />
+    <Content Include="imagenes\imagenes-razas\Vaca-jersey.png" />
+    <Content Include="imagenes\imagenes-razas\Vaca-sindhi.png" />
+    <Content Include="imagenes\imagenes-razas\Vaca_Holstein_Carrusel.jpg" />
+    <Content Include="imagenes\imagenes-razas\Vaca_jersey_Carrusel.jpg" />
+    <Content Include="imagenes\imagenes-razas\Vaca_sindhi_Carrusel.png" />
+    <Content Include="imagenes\img01.png" />
     <Content Include="imagenes\logos\Logo-Lacteos-Quesos-Don-Joaquin.png" />
+    <Content Include="js\script.js" />
+    <Content Include="paginas\ganado.html" />
     <Content Include="paginas\Principal.html" />
     <Content Include="Web.config" />
   </ItemGroup>
