@@ -11,7 +11,7 @@
     <title>Lácteos y Quesos | Airehcel Principal</title>
     <link rel="icon" href="../imagenes/logos/Logo-Lacteos-Quesos-Don-Joaquin.png" type="image/png">
 </head>
- 
+
 <body>
 
 
@@ -58,7 +58,7 @@
     <nav class="w3-bar">
         <a href="principal.html" class="w3-button w3-bar-item">HOME</a>
         <a href="#blog" class="w3-button w3-bar-item">BLOG</a>
-      <a href="ganado.html" class="w3-button w3-bar-item">GANADO</a>
+        <a href="ganado.html" class="w3-button w3-bar-item">GANADO</a>
         <a href="#nosotros" class="w3-button w3-bar-item">NOSOTROS</a>
         <a href="#productos" class="w3-button w3-bar-item">PRODUCTOS</a>
         <a href="#contactos" class="w3-button w3-bar-item">CONTACTOS</a>
@@ -251,14 +251,129 @@
 
 
         <section id="tab3" class="tab-content">
-            <h2>Contenido Tab 3</h2>
-            <p>Este es el contenido de la tercera pestaña.</p>
+            <h2>Dashboard Interactivo</h2>
+            <p>Visualización de producción de leche.</p>
+
+            <div id="dashboard">
+                <!-- Producción diaria -->
+                <div class="chart">
+                    <h3>Producción diaria (litros)</h3>
+                    <div class="bar-chart" id="produccionDia"></div>
+                </div>
+
+                <!-- Producción por raza -->
+                <div class="chart">
+                    <h3>Producción por raza (litros)</h3>
+                    <div class="bar-chart" id="produccionRaza"></div>
+                </div>
+
+                <!-- Producción por tipo de leche -->
+                <div class="chart">
+                    <h3>Producción por tipo de leche (litros)</h3>
+                    <div class="bar-chart" id="produccionLeche"></div>
+                </div>
+            </div>
+
+            <!-- Enlazamos los archivos externos -->
+            <link rel="stylesheet" href="../css/estilos.css">
+            <script src="../js/script.js" defer></script>
         </section>
 
         <section id="tab4" class="tab-content">
-            <h2>Contenido Tab 4</h2>
-            <p>Este es el contenido de la cuarta pestaña.</p>
+            <h2>📅 Calendario de Salud </h2>
+
+            <div class="health-container">
+                <!-- Panel izquierdo: Mini calendario y próximas citas -->
+                <div class="calendar-sidebar">
+                    <div class="mini-calendar">
+                        <div class="calendar-header">
+                            <button id="prevMonth">&lt;</button>
+                            <h3 id="currentMonth">Septiembre 2025</h3>
+                            <button id="nextMonth">&gt;</button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Días del mes se generarán con JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="upcoming-events">
+                        <h3>Próximas Citas</h3>
+                        <div id="upcomingList">
+                            <!-- Eventos próximos se cargarán aquí -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel derecho: Lista de vacas y sus tratamientos -->
+                <div class="cows-list">
+                    <h3>Lista de Vacas</h3>
+                    <div class="search-box">
+                        <input type="text" id="searchCow" placeholder="Buscar vaca por nombre o ID...">
+                    </div>
+                    <div class="cows-grid" id="cowsGrid">
+                        <!-- Lista de vacas se generará con JavaScript -->
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- Modal para mostrar detalles de tratamientos -->
+        <div class="modal-backdrop health-modal" id="healthModalBackdrop">
+            <div class="modal health-modal-content" role="dialog" aria-labelledby="healthModalTitle">
+                <div class="modal-header">
+                    <div>
+                        <strong id="healthModalTitle">Tratamientos y Controles</strong>
+                        <div id="healthModalSub" style="font-size:13px;color:var(--muted)"></div>
+                    </div>
+                    <button class="close-btn" id="closeHealthModal">Cerrar ✕</button>
+                </div>
+
+                <div class="modal-body health-modal-body">
+                    <div class="cow-profile">
+                        <div class="cow-photo" id="cowPhoto">VACA</div>
+                        <div class="cow-info">
+                            <div class="info-row"><b id="cowId">ID: -</b></div>
+                            <div class="info-row"><b>Raza:</b> <span id="cowBreed">-</span></div>
+                            <div class="info-row"><b>Edad:</b> <span id="cowAge">-</span></div>
+                            <div class="info-row"><b>Estado reproductivo:</b> <span id="cowRepro">-</span></div>
+                        </div>
+                    </div>
+
+                    <div class="health-sections">
+                        <div class="health-section">
+                            <h3>📋 Tratamientos Programados</h3>
+                            <div id="scheduledTreatments">
+                                <!-- Tratamientos programados se cargarán aquí -->
+                            </div>
+                        </div>
+
+                        <div class="health-section">
+                            <h3>💉 Historial de Vacunación</h3>
+                            <div id="vaccinationHistory">
+                                <!-- Historial de vacunación se cargará aquí -->
+                            </div>
+                        </div>
+
+                        <div class="health-section">
+                            <h3>🩺 Controles de Salud</h3>
+                            <div id="healthControls">
+                                <!-- Controles de salud se cargarán aquí -->
+                            </div>
+                        </div>
+
+                        <div class="health-section">
+                            <h3>📝 Notas y Observaciones</h3>
+                            <div id="healthNotes">
+                                <!-- Notas de salud se cargarán aquí -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../js/calendario-salud.js" defer></script>
 
     </main>
 
