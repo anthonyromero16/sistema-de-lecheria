@@ -1,0 +1,168 @@
+/* ============================
+      LOGIN PAGE STYLE
+=============================== */
+
+.site-login {
+    max-width: 450px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #e6c7ae; /* caja beige suave */
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+    /* Título Log In */
+    .site-login h1 {
+        background-color: #c19a85;
+        color: white;
+        padding: 14px;
+        border-radius: 15px;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    /* Texto "Please fill out..." */
+    .site-login p {
+        font-size: 16px;
+        color: #7d4c32;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    /* Botón Volver */
+    .site-login > button {
+        background-color: #c49a87;
+        color: #7d4c32;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.25s ease;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+        .site-login > button:hover {
+            background-color: #d8b8a3;
+        }
+
+    /* Labels */
+    .site-login label {
+        font-weight: bold !important;
+        color: white !important;
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    /* Inputs */
+    .site-login input.form-control {
+        background-color: #c19a85;
+        border: none;
+        color: white;
+        padding: 14px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        box-shadow: inset 0px 2px 4px rgba(0,0,0,0.2);
+    }
+
+        .site-login input.form-control::placeholder {
+            color: #f0e2d8;
+        }
+
+/* Checkbox remember me */
+.custom-control.custom-checkbox label {
+    color: white !important;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+/* Botón Login */
+.btn.btn-primary {
+    background-color: #6b3f27 !important;
+    border: none !important;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+    .btn.btn-primary:hover {
+        background-color: #57331f !important;
+    }
+
+/* Registrar (solo texto) */
+.login-register {
+    margin-top: 18px;
+}
+
+    .login-register a {
+        color: white;
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+        .login-register a:hover {
+            color: #6b3f27;
+        }
+
+/* Forzar que la columna del login NO use el ancho de Bootstrap */
+.site-login .row,
+.site-login .col-lg-5 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* Centrar el formulario de Yii2 dentro del contenedor */
+#login-form {
+    width: 100% !important;
+}
+
+/* Arreglo para que los inputs ocupen 100% */
+.site-login .form-control {
+    width: 100% !important;
+}
+
+/* Arreglar checkbox mal alineado */
+.custom-control.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Centrar labels (username, password) */
+.site-login .form-group > label,
+.site-login label[for="loginform-username"],
+.site-login label[for="loginform-password"] {
+    display: block !important; /* asegurar que estén en su propia línea */
+    width: 100% !important;
+    text-align: center !important; /* centrado del texto */
+    margin: 0 0 8px 0 !important; /* pequeño espacio debajo */
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff !important;
+}
+
+/* Si usas clase custom para labels del checkbox, mantenla a la izquierda */
+.remember-label,
+.site-login .custom-control.custom-checkbox .remember-label,
+.site-login .custom-control.custom-checkbox label {
+    display: inline-block !important;
+    text-align: left !important;
+    margin-left: 6px !important;
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* Asegurar que las etiquetas del ActiveForm no hereden márgenes raros */
+.site-login .col-form-label {
+    margin: 0 !important;
+    padding: 0 !important;
+}

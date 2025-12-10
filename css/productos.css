@@ -1,0 +1,212 @@
+﻿/* --- Títulos --- */
+.titulo-principal {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .titulo-principal h2 {
+        display: inline-block;
+        background-color: #d9b8a3; /* Color ajustado al ejemplo de historia */
+        color: #7d4c32;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-size: 32px;
+        font-weight: bold; /* ¡Negrita agregada! */
+    }
+
+/* --- Wrapper y Botones --- */
+.carrusel-wrapper {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+/* Botones del carrusel */
+.carrusel-btn {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    margin: 0;
+}
+
+    .carrusel-btn:hover {
+        background-color: rgba(255,255,255,0.9);
+    }
+
+/* --- Carruseles (Contenedores) --- */
+/* Ambos carruseles comparten estilo */
+.carrusel1,
+.carrusel2 {
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    flex: 1;
+}
+
+    /* --- Cards (3 por carrusel) --- */
+    .carrusel1 .card,
+    .carrusel2 .card {
+        flex: 0 0 calc(33.333% - 13.33px); /* 3 cards EXACTAS */
+        background-color: #e1cdb5;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        /* Altura consistente */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 380px;
+    }
+
+        /* --- Imagenes --- */
+        .carrusel1 .card img,
+        .carrusel2 .card img {
+            width: 100%;
+            height: 200px; /* tamaño EXACTO como antes */
+            object-fit: contain;
+            object-position: center;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            flex-shrink: 0; /* evita que se deformen */
+        }
+
+        /* --- Texto --- */
+        .carrusel1 .card h3,
+        .carrusel2 .card h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .carrusel1 .card p,
+        .carrusel2 .card p {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+
+
+/* ============================
+   ESTILO DEL MENÚ DE USUARIO
+   ============================ */
+
+/* Contenedor general del botón + menú */
+.user-menu {
+    position: fixed;
+    top: 20px;
+    right: 30px; /* menú a la derecha */
+    z-index: 1000;
+    font-family: inherit;
+}
+
+/* Botón del menú */
+.menu-btn.user-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #c49a87; /* marrón claro */
+    color: #7d4c32; /* marrón oscuro */
+    padding: 10px 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+    .menu-btn.user-btn:hover {
+        background-color: #d8b8a3;
+    }
+
+/* Imagen del avatar */
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; /* redondeado */
+    object-fit: cover;
+    border: 2px solid #7d4c32;
+}
+
+/* Nombre */
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ============================
+   OPCIONES DEL MENÚ DESPLEGABLE
+   ============================ */
+
+.menu-options {
+    position: absolute;
+    right: 0;
+    width: 180px;
+    margin-top: 8px;
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: none; /* tu JS cambia esto */
+    flex-direction: column;
+    overflow: hidden;
+    animation: menuSlide 0.25s ease-out;
+}
+
+@keyframes menuSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enlaces del menú */
+.menu-options a {
+    padding: 12px 18px;
+    display: block;
+    text-decoration: none;
+    color: #7d4c32;
+    font-weight: 600;
+    border-bottom: 1px solid #e1cdb5;
+    transition: background 0.2s ease;
+}
+
+    .menu-options a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-options a:hover {
+        background-color: #e1cdb5;
+    }
+
+/* Animación suave del menú */
+.menu-options {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+    /* Cuando el menú está visible (tu JS solo cambia display) */
+    .menu-options[style*="display: flex"],
+    .menu-options[style*="display: block"] {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }

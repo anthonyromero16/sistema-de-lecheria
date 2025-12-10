@@ -1,0 +1,171 @@
+/* ================================
+   FONDO DE LA PÁGINA
+================================ */
+body {
+    background-color: #fff8f3; /* nuevo fondo solicitado */
+    font-family: inherit;
+}
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+.profile-container {
+    width: 90%;
+    max-width: 650px;
+    margin: 40px auto;
+    background-color: #f2dcc6; /* AHORA MISMO COLOR DEL FONDO */
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* sombra para diferenciar */
+}
+
+/* ================================
+   TÍTULO “Tu Perfil”
+================================ */
+
+h1 {
+    background-color: #c19a85;
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ================================
+   BOTÓN VOLVER
+================================ */
+.profile-back-btn,
+.profile-container button {
+    background-color: #c49a87;
+    color: #7d4c32;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.25s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+    .profile-container button:hover {
+        background-color: #d8b8a3;
+    }
+
+/* ================================
+   MENSAJES DE ÉXITO / ERROR
+================================ */
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.flash-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ================================
+   ESTILO GENERAL PARA LOS BLOQUES
+   (INFO, CAMBIAR FOTO, CAMBIAR CONTRASEÑA)
+================================ */
+.profile-block {
+    background-color: #fff8f3; /* mismo color del fondo */
+    padding: 22px 25px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* sombra externa */
+}
+
+/* ================================
+   INFORMACIÓN DEL USUARIO
+================================ */
+.profile-info {
+}
+
+    .profile-info p {
+        font-size: 16px;
+        font-weight: bold;
+        color: #7d4c32;
+        margin-bottom: 12px;
+    }
+
+    .profile-info img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        border: 3px solid #7d4c32;
+        object-fit: cover;
+    }
+
+/* ================================
+   FORMULARIOS
+================================ */
+.change-password h3,
+.change-image h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #7d4c32;
+    margin-bottom: 12px;
+}
+
+.change-password label,
+.change-image label {
+    font-weight: bold;
+    color: #7d4c32;
+    font-size: 15px;
+}
+
+.change-password input[type="password"],
+.change-image input[type="file"] {
+    width: 100%;
+    background-color: #c49a87;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin: 8px 0 16px;
+    font-size: 15px;
+    color: white;
+    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Botones */
+.change-password button,
+.change-image button {
+    width: 60%;
+    display: block;
+    margin: auto;
+    background-color: #7d4c32;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+    .change-password button:hover,
+    .change-image button:hover {
+        background-color: #8f5a3d;
+    }
+
+/* Separadores */
+.profile-container hr {
+    border: none;
+    height: 2px;
+    background-color: #c49a87;
+    margin: 25px 0;
+}
