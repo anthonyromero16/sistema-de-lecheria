@@ -1,0 +1,356 @@
+﻿/* --- Estilos del Título de la Página (Bloque Marrón Superior) --- */
+.titulo-principal-pagina {
+    text-align: center;
+    margin: 50px auto 30px; /* Margen para separarlo del contenido superior/inferior */
+    width: 60%; /* Anchura similar a la imagen */
+    max-width: 800px;
+    background-color: #c49a87; /* Color marrón del diseño */
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+    .titulo-principal-pagina h2 {
+        color: #7d4c32; /* Texto blanco */
+        margin: 0;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+/* --- Estilos del Contenedor de Bienvenida (El bloque de 2 columnas) --- */
+.bienvenida-contenedor {
+    display: flex; /* 🔑 CLAVE: Usar Flexbox para las 2 columnas */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    background-color: #e1cdb5; /* Color beige/marrón claro del diseño */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Para contener la imagen con bordes redondeados */
+}
+
+/* --- Bloque de Texto --- */
+.bienvenida-texto {
+    flex: 1; /* Ocupa la parte izquierda (más grande) */
+    padding: 40px;
+    text-align: left;
+}
+
+    .bienvenida-texto h2 {
+        /* El "Bienvenida" dentro del bloque debe tener el mismo estilo que los títulos de las cards */
+        font-size: 28px;
+        color: #7d4c32; /* Color marrón oscuro de tus títulos */
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .bienvenida-texto p {
+        line-height: 1.6;
+        color: #3e2717; /* Color de texto oscuro para legibilidad */
+        margin-bottom: 15px;
+    }
+
+/* --- Bloque de Imagen --- */
+.bienvenida-imagen {
+    flex: 0 0 50%; /* 🔑 CLAVE: La imagen ocupa el 50% de la anchura */
+    max-height: 450px; /* Altura máxima para limitar la imagen */
+    overflow: hidden;
+}
+
+    .bienvenida-imagen img {
+        width: 100%;
+        height: 100%;
+        /* Asegura que la imagen cubra completamente el contenedor sin deformarse */
+        object-fit: cover;
+        display: block;
+    }
+
+
+/* ============================
+   ESTILO DEL MENÚ DE USUARIO
+   ============================ */
+
+/* Contenedor general del botón + menú */
+.user-menu {
+    position: absolute;
+    top: 20px;
+    right: 30px; /* menú a la derecha */
+    z-index: 1000;
+    font-family: inherit;
+}
+
+/* Botón del menú */
+.menu-btn.user-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #c49a87; /* marrón claro */
+    color: #7d4c32; /* marrón oscuro */
+    padding: 10px 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+    .menu-btn.user-btn:hover {
+        background-color: #d8b8a3;
+    }
+
+/* Imagen del avatar */
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; /* redondeado */
+    object-fit: cover;
+    border: 2px solid #7d4c32;
+}
+
+/* Nombre */
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ============================
+   OPCIONES DEL MENÚ DESPLEGABLE
+   ============================ */
+
+.menu-options {
+    position: absolute;
+    right: 0;
+    width: 180px;
+    margin-top: 8px;
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: none; /* tu JS cambia esto */
+    flex-direction: column;
+    overflow: hidden;
+    animation: menuSlide 0.25s ease-out;
+}
+
+@keyframes menuSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enlaces del menú */
+.menu-options a {
+    padding: 12px 18px;
+    display: block;
+    text-decoration: none;
+    color: #7d4c32;
+    font-weight: 600;
+    border-bottom: 1px solid #e1cdb5;
+    transition: background 0.2s ease;
+}
+
+    .menu-options a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-options a:hover {
+        background-color: #e1cdb5;
+    }
+
+/* Animación suave del menú */
+.menu-options {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+    /* Cuando el menú está visible (tu JS solo cambia display) */
+    .menu-options[style*="display: flex"],
+    .menu-options[style*="display: block"] {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+
+/* --- Estilos para la Imagen de Fondo y el Bloque de Título --- */
+
+/* Contenedor principal de la sección Metas */
+
+/* --- Título Destacado (Fuera del contenedor de imagen) --- */
+.titulo-destacado {
+    text-align: center;
+    margin: 40px auto 20px;
+    width: fit-content;
+    background-color: #c49a87;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+    .titulo-destacado h2 {
+        color: #7d4c32;
+        margin: 0;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+/* --- Contenedor Principal (Imagen de Fondo) --- */
+.metas-contenedor {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+    height: 600px;
+    overflow: hidden;
+}
+
+    /* 1. Imagen de Fondo (Oscurecida) */
+    .metas-contenedor > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(40%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+/* 2. Contenido de Metas (Bloque de texto centrado) */
+.metas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 1000px;
+    z-index: 3;
+}
+
+.metas-texto-wrapper {
+    /* 🔑 CLAVE: Fondo semi-transparente NEGRO (Copiado del ejemplo de 'historia-texto') */
+    background: rgba(0, 0, 0, 0.55);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* 🔑 CLAVE: Color de texto en BLANCO para alto contraste */
+    color: #fff;
+    text-align: justify;
+    text-align: center;
+}
+
+    .metas-texto-wrapper p {
+        margin-bottom: 18px;
+        line-height: 1.6;
+        font-size: 18px;
+        /* Aseguramos que los párrafos hereden el color blanco */
+        color: #fff;
+    }
+
+        .metas-texto-wrapper p:last-child {
+            margin-bottom: 0;
+        }
+
+/* --- Título de la Sección Fincas --- */
+.titulo-principal {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .titulo-principal h2 {
+        display: inline-block;
+        background-color: #c49a87; /* Fondo marrón oscuro del diseño */
+        color: #7d4c32; /* Texto del título en marrón oscuro */
+        padding: 20px 40px;
+        font-size: 32px;
+        font-weight: bold;
+        border-radius: 12px;
+        max-width: 800px;
+        margin: 40px auto 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+/* --- Wrapper y Botones de Carrusel --- */
+.carrusel-wrapper {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.carrusel-btn {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    margin: 0;
+}
+
+    .carrusel-btn:hover {
+        background-color: rgba(255,255,255,0.9);
+    }
+
+/* --- Estilos del Contenedor de Fincas (.carrusel3) --- */
+/* Esta regla aplica la disposición Flexbox y el scroll suave a TODOS los carruseles */
+.carrusel1, .carrusel2, .carrusel3 {
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    flex: 1;
+}
+
+    /* --- Estilos de las Tarjetas de Fincas (.card) --- */
+    /* Aplica la altura uniforme y el color de fondo a las tarjetas en .carrusel3 */
+    .carrusel1 .card, .carrusel2 .card, .carrusel3 .card {
+        flex: 0 0 calc(33.333% - 13.33px); /* 3 tarjetas visibles */
+        background-color: #e1cdb5; /* Fondo de la tarjeta */
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 380px; /* Altura fija para uniformidad */
+    }
+
+        /* --- Estilos de las Imágenes de Fincas --- */
+        .carrusel1 .card img, .carrusel2 .card img, .carrusel3 .card img {
+            width: 100%;
+            height: 200px; /* Altura fija para uniformidad */
+            object-fit: contain;
+            object-position: center;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            flex-shrink: 0;
+        }
+
+        /* Estilos de Texto en las Cards */
+        .carrusel1 .card h3, .carrusel2 .card h3, .carrusel3 .card h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .carrusel1 .card p, .carrusel2 .card p, .carrusel3 .card p {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
